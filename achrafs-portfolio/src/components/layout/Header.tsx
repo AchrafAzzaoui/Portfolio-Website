@@ -1,3 +1,4 @@
+// Header.tsx
 import { useState, useEffect } from "react";
 import { RxLinkedinLogo } from "react-icons/rx";
 import { FaGithub } from "react-icons/fa";
@@ -13,8 +14,8 @@ const menuVariants = {
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  // Handle screen resize
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -25,7 +26,14 @@ export default function Header() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Handle scroll lock
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isScrolled]);
+
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -39,7 +47,11 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-40 backdrop-blur-sm shadow-[0_4px_10px_rgba(0,0,0,0.3)] border-b transition-shadow duration-300 border-white/10 px-2 xl:px-10 py-5">
+      <header
+        className={`sticky top-0 left-0 right-0 z-40 shadow-[0_4px_10px_rgba(0,0,0,0.3)] border-b transition-all duration-300 border-white/10 px-2 xl:px-10 py-5 ${
+          isScrolled ? "bg-[#0A0E1C]" : "bg-transparent"
+        }`}
+      >
         <nav className="flex">
           <div className="basis-3/16 flex-auto flex justify-start pl-4 md:pl-0 md:justify-center items-center font-display font-bold text-dark-text-primary">
             <a href="#home">
@@ -70,10 +82,10 @@ export default function Header() {
           </div>
           <div className="hidden md:flex basis-6/16 flex-auto justify-evenly items-center">
             <a href="https://www.linkedin.com/in/achraf-azzaoui-data-scientist">
-              <RxLinkedinLogo className="text-3xl rounded-sm text-dark-text-primary hover:text-dark-text-customcolor hover:scale-110" />
+              <RxLinkedinLogo className="text-3xl rounded-sm text-dark-text-primary hover:text-purple-500 hover:scale-110" />
             </a>
             <a href="https://github.com/AchrafAzzaoui">
-              <FaGithub className="text-3xl rounded-full text-dark-text-primary hover:text-dark-text-customcolor hover:scale-110" />
+              <FaGithub className="text-3xl rounded-full text-dark-text-primary hover:text-purple-500 hover:scale-110" />
             </a>
             <button
               style={{
@@ -111,18 +123,16 @@ export default function Header() {
         <AnimatePresence>
           {isMenuOpen && (
             <>
-              {/* Overlay */}
               <motion.div
-                className="fixed inset-0 bg-black/60 z-40"
+                className="fixed inset-0 bg-[#0A0E1C] z-40"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={() => setIsMenuOpen(false)}
               />
 
-              {/* Menu Panel */}
               <motion.div
-                className="fixed top-0 left-0 w-3/4 sm:w-1/2 h-full bg-[#0A0E1C] text-white z-50 flex flex-col"
+                className="fixed top-0 left-0 w-3/4 sm:w-1/2 h-full bg-dark-bg-primary text-white z-50 flex flex-col"
                 variants={menuVariants}
                 initial="hidden"
                 animate="visible"
@@ -158,13 +168,13 @@ export default function Header() {
                     <div className="flex justify-center gap-6 mb-8">
                       <a
                         href="https://github.com/AchrafAzzaoui"
-                        className="text-white hover:text-purple-400 transition-colors"
+                        className="text-white hover:text-dark-text-customcolor transition-colors  hover:text-purple-500 hover:scale-110"
                       >
                         <FaGithub className="text-3xl" />
                       </a>
                       <a
                         href="https://www.linkedin.com/in/achraf-azzaoui-data-scientist"
-                        className="text-white hover:text-purple-400 transition-colors"
+                        className="text-white hover:text-dark-text-customcolor transition-colors  hover:text-purple-500 hover:scale-110"
                       >
                         <RxLinkedinLogo className="text-3xl" />
                       </a>
