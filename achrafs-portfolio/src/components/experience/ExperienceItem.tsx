@@ -1,57 +1,41 @@
 import { Experience } from "../../data/experiences";
+import { Category } from "../../data/skills";
+import { tagColorSystem } from "../../data/skills";
 import SkillTag from "../skill/SkillTag";
 import { IoCalendarOutline } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 interface ExperienceItemProps {
   experience: Experience;
 }
-type Category = "frontend" | "backend" | "database" | "devops" | "ml";
 
-const tagColorSystem: Record<Category, { background: string; text: string }> = {
-  frontend: {
-    background: "bg-emerald-400/20",
-    text: "text-emerald-300",
-  },
-  backend: {
-    background: "bg-sky-400/20",
-    text: "text-sky-300",
-  },
-  database: {
-    background: "bg-fuchsia-400/20",
-    text: "text-fuchsia-300",
-  },
-  devops: {
-    // lowercase to match data
-    background: "bg-amber-400/20",
-    text: "text-amber-300",
-  },
-  ml: {
-    background: "bg-rose-400/20",
-    text: "text-rose-300",
-  },
-};
+// bg-gradient-to-tr from-[#1B2532] to-[#222E3C]
 
 export default function ExperienceItem({ experience }: ExperienceItemProps) {
   return (
-    <div
-      className="flex flex-col gap-4 md:gap-6 px-4 py-4 rounded-lg
-      bg-gradient-to-tr from-[#1B2532] to-[#222E3C]
-      border-2 border-white/5 hover:border-purple-500/40
-      transition-all duration-300 ease-in-out
-      hover:scale-[1.01] hover:shadow-lg hover:shadow-purple-500/10"
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      className="flex basis-1/2 flex-col gap-4 md:gap-6 px-8 py-6 rounded-lg
+       bg-gradient-to-br from-slate-900 to-slate-800
+        border-2 border-white/5
+        hover:border-purple-500/40
+        transition-all duration-300 ease-in-out
+        hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/10"
     >
-      <div className="flex justify-between gap-2">
-        <div className="flex justify-start basis-1/3 gap-2 md:gap-2 text-sm font-semibold text-dark-text-primary text-center ">
-          <IoCalendarOutline className="text-xl inline-block text-teal-500" />
-          <h4 className="">{experience.period}</h4>
+      <div className="flex flex-col justify-between">
+        <div className="flex items-center justify-between w-full">
+          <h4 className="text-2xl font-semibold text-white">
+            {experience.title}
+          </h4>
+          <div className="flex items-center justify-end ml-auto text-right gap-2">
+            <IoCalendarOutline className="text-xl text-teal-500 text-right" />
+            <h4 className="text-gray-400 text-sm">{experience.period}</h4>
+          </div>
         </div>
-        <h4 className="basis-1/3 text-sm font-semibold text-dark-text-primary text-center">
-          {experience.title}
-        </h4>
-        <h4 className="basis-1/3 text-sm font-semibold text-dark-text-primary text-center">
-          {experience.company}
-        </h4>
       </div>
+      <p className="basis-1/3 text-sm  text-gray-300">{experience.company}</p>
       <p className="text-dark-text-secondary text-sm">
         {experience.description}
       </p>
@@ -67,6 +51,6 @@ export default function ExperienceItem({ experience }: ExperienceItemProps) {
           </SkillTag>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -8,12 +8,12 @@ export default function HeroSection() {
     "Machine Learning Engineer",
   ];
   return (
-    <section className="w-full px-4 md:px-24 flex flex-col items-center md:flex-row md:items-start md:justify-between mt-4 py-6 gap-8 md:py-12 md:gap-10">
+    <section className="w-full flex flex-col items-center md:flex-row md:items-start md:justify-between mt-4 py-6 gap-8 md:py-12 md:gap-10">
       <div className="w-full md:basis-[62.5%] flex flex-col items-center md:items-start">
-        <h1 className="text-5xl md:text-7xl font-display font-extrabold text-center text-dark-text-primary">
+        <h1 className="text-5xl md:text-7xl xl:text-8xl font-display font-extrabold text-center text-dark-text-primary">
           I'm Achraf, a
         </h1>
-        <h2 className="text-3xl md:text-4xl font-sans font-medium text-center text-dark-text-primary mt-6">
+        <h2 className="text-3xl md:text-4xl xl:text-5xl font-sans font-medium text-center text-dark-text-primary mt-6">
           <Typewriter
             onInit={(typewriter) => {
               strings.forEach((string) => {

@@ -46,4 +46,14 @@
     content: "";
     position: absolute;
   }
+
+  .card-gradient-hover {
+    @apply bg-gradient-to-br from-slate-900 to-slate-800 
+           border-2 border-white/5 
+           hover:border-purple-500/40 
+           transition-all duration-300 ease-in-out 
+           hover:scale-[1.02] 
+           hover:shadow-lg hover:shadow-purple-500/10
+           rounded-lg;
+  }
 }

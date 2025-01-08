@@ -38,4 +38,49 @@ export const experiences: Experience[] = [
       ["Docker", "devops"], // Changed from "devOps"
     ]),
   },
+  {
+    id: 1,
+    title: "ML Engineer",
+    company: "Open City Labs",
+    period: "Dec 2024 - Present",
+    description:
+      "Developing REST APIs for interoperability between different healthcare systems utilizing vector similarity search and AI/ML models.",
+    skills: new Map([
+      ["Milvus", "database"],
+      ["MongoDB", "database"],
+      ["FastAPI", "backend"],
+      ["Python", "backend"],
+      ["Docker", "devops"], // Changed from "devops"
+    ]),
+  },
+  {
+    id: 1,
+    title: "ML Engineer",
+    company: "Open City Labs",
+    period: "Dec 2024 - Present",
+    description:
+      "Developing REST APIs for interoperability between different healthcare systems utilizing vector similarity search and AI/ML models.",
+    skills: new Map([
+      ["Milvus", "database"],
+      ["MongoDB", "database"],
+      ["FastAPI", "backend"],
+      ["Python", "backend"],
+      ["Docker", "devops"], // Changed from "devops"
+    ]),
+  },
+  {
+    id: 1,
+    title: "ML Engineer",
+    company: "Open City Labs",
+    period: "Dec 2024 - Present",
+    description:
+      "Developing REST APIs for interoperability between different healthcare systems utilizing vector similarity search and AI/ML models.",
+    skills: new Map([
+      ["Milvus", "database"],
+      ["MongoDB", "database"],
+      ["FastAPI", "backend"],
+      ["Python", "backend"],
+      ["Docker", "devops"], // Changed from "devops"
+    ]),
+  },
 ];
