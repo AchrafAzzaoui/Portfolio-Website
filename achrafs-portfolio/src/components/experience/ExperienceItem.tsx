@@ -30,7 +30,7 @@ export default function ExperienceItem({ experience }: ExperienceItemProps) {
             {experience.title}
           </h4>
           <div className="flex items-center justify-end ml-auto text-right gap-2">
-            <IoCalendarOutline className="text-xl text-teal-500 text-right" />
+            <IoCalendarOutline className="hidden md:block text-xl text-teal-500 text-right" />
             <h4 className="text-gray-400 text-sm">{experience.period}</h4>
           </div>
         </div>
