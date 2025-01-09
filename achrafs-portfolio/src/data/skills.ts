@@ -110,7 +110,7 @@ export const skills: SkillCategory[] = [
       { name: "Pandas", category: "ml" },
       { name: "NumPy", category: "ml" },
       { name: "Matplotlib", category: "ml" },
-      { name: "Retrieval Augmented Generation", category: "ml" },
+      { name: "RAG", category: "ml" },
       { name: "LLMs", category: "ml" },
       { name: "XGBoost", category: "ml" },
       { name: "Time Series", category: "ml" },
