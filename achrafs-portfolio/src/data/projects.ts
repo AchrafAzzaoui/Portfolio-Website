@@ -21,7 +21,7 @@ export const projects: Project[] = [
       { name: "React", category: "frontend" },
       { name: "Node.js", category: "backend" },
       { name: "Vector Databases", category: "ml" },
-      { name: "Retrieval Augmented Generation", category: "ml" },
+      { name: "RAG", category: "ml" },
       { name: "LLMs", category: "ml" },
     ],
     githubLink: "https://github.com/AchrafAzzaoui/hackrice-2024",
