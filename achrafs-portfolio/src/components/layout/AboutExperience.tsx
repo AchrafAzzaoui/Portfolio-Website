@@ -49,7 +49,7 @@ export default function AboutExperience() {
             </a>{" "}
             or connect with me on{" "}
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/achraf-azzaoui-data-scientist"
               className="underline hover:text-blue-400 transition-colors"
             >
               LinkedIn
