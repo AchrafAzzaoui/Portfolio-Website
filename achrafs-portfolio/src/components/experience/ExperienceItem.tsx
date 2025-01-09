@@ -25,13 +25,15 @@ export default function ExperienceItem({ experience }: ExperienceItemProps) {
         hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/10"
     >
       <div className="flex flex-col justify-between">
-        <div className="flex items-center justify-between w-full">
+        <div className="flex items-center justify-between w-full gap-2">
           <h4 className="text-2xl font-semibold text-white">
             {experience.title}
           </h4>
           <div className="flex items-center justify-end ml-auto text-right gap-2">
             <IoCalendarOutline className="hidden md:block text-xl text-teal-500 text-right" />
-            <h4 className="text-gray-400 text-sm">{experience.period}</h4>
+            <h4 className="text-gray-400 text-sm text-center md:text-right">
+              {experience.period}
+            </h4>
           </div>
         </div>
       </div>
