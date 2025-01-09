@@ -1,7 +1,7 @@
 import ExperienceItem from "./ExperienceItem";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Experience, experiences } from "../../data/experiences";
+import { experiences } from "../../data/experiences";
 import { useState } from "react";
 
 const ITEMS_PER_PAGE = 2;

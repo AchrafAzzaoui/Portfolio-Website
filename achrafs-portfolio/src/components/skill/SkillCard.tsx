@@ -3,7 +3,6 @@ import { Skill } from "../../data/skills";
 import { tagColorSystem } from "../../data/skills";
 import SkillTag from "./SkillTag";
 import React, { cloneElement } from "react";
-import { useState } from "react";
 
 const rename = (name: Category) => {
   const renameDict: { [key in Category]: string } = {

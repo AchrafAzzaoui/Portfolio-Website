@@ -10,7 +10,6 @@ import { getImageUrl } from "../../utils/getImageUrl";
 import ProjectModal from "./ProjectModal";
 
 interface ProjectCardProps {
-  id: number;
   image: string;
   title: string;
   description: string;
@@ -20,7 +19,6 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({
-  id,
   image,
   title,
   description,

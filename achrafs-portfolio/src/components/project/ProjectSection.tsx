@@ -1,7 +1,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Project, projects } from "../../data/projects";
+import { projects } from "../../data/projects";
 import ProjectCard from "./ProjectCard";
 
 export default function ProjectSection() {
