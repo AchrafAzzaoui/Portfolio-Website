@@ -68,10 +68,10 @@ export default function Header() {
               About
             </a>
             <a
-              href="#skills"
+              href="#experience"
               className="font-sans font-medium text-dark-text-primary text-lg transition-transform duration-300 hover:-translate-y-0.5"
             >
-              Skills
+              Experience
             </a>
             <a
               href="#projects"
