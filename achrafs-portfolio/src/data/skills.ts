@@ -89,6 +89,7 @@ export const skills: SkillCategory[] = [
     skills: [
       { name: "MongoDB", category: "database" },
       { name: "PostgreSQL", category: "database" },
+      { name: "Milvus", category: "database" },
     ],
   },
   {

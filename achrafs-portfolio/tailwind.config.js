@@ -6,8 +6,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-dark": "linear-gradient(to right, #0A0F1A, #0A0F1A)",
-        // "linear-gradient(130deg, #0A0F1A 0%, #0C1322 40%, #0E1628 100%)",
+        "gradient-dark":
+          "linear-gradient(130deg, #0A0F1A 0%, #0C1322 40%, #0E1628 100%)",
         // "gradient-dark":
         //"linear-gradient(130deg, #080C14 0%, #0A0F1A 40%, #0B121E 100%)",
         "gradient-light":
@@ -20,9 +20,6 @@ export default {
             primary: "#F8FAFC", // Almost white
             secondary: "#94A3B8", // Lighter gray
             muted: "#64748B", // Muted gray
-          },
-          background: {
-            primary: "bg-gradient-to-br from-slate-900 to-slate-800",
           },
         },
         // Light theme
