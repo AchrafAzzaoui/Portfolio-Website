@@ -16,71 +16,58 @@ export const experiences: Experience[] = [
     company: "Open City Labs",
     period: "Dec 2024 - Present",
     description:
-      "Developing REST APIs for interoperability between different healthcare systems utilizing vector similarity search and AI/ML models.",
+      "Developed REST APIs for healthcare data integration using vector similarity search and ML models. Implemented cross-database architecture between Milvus and MongoDB for medical terminology standardization.",
     skills: new Map([
       ["Milvus", "database"],
       ["MongoDB", "database"],
       ["FastAPI", "backend"],
       ["Python", "backend"],
-      ["Docker", "devops"], // Changed from "devops"
+      ["Docker", "devops"],
+      ["LLMs", "ml"],
     ]),
   },
   {
     id: 2,
-    title: "Data Science Researcher",
+    title: "Data Science RA",
     company: "Jones School of Business",
     period: "Jan 2024 - Present",
-    description: "Did literally nothing useful at all",
+    description:
+      "Engineered ETL pipelines using Google Cloud and BigQuery to process over 1TB of foottraffic data. Implemented causal inference analysis using difference-in-differences methodology and propensity score matching.",
     skills: new Map([
-      ["SQL", "database"],
       ["BigQuery", "database"],
       ["Python", "ml"],
-      ["Docker", "devops"], // Changed from "devOps"
+      ["Docker", "devops"],
+      ["Google Cloud", "devops"],
+      ["Causal Inference", "ml"],
     ]),
   },
   {
-    id: 1,
-    title: "ML Engineer",
-    company: "Open City Labs",
-    period: "Dec 2024 - Present",
+    id: 3,
+    title: "Technical Analyst",
+    company: "ACT Rice Consulting",
+    period: "Jan 2024 - Present",
     description:
-      "Developing REST APIs for interoperability between different healthcare systems utilizing vector similarity search and AI/ML models.",
+      "Increased nonprofit program evaluation accuracy through data analysis and interactive visualizations. Developing a responsive student recruitment portal using React and Tailwind CSS.",
     skills: new Map([
-      ["Milvus", "database"],
-      ["MongoDB", "database"],
-      ["FastAPI", "backend"],
-      ["Python", "backend"],
-      ["Docker", "devops"], // Changed from "devops"
+      ["React", "frontend"],
+      ["Tailwind CSS", "frontend"],
+      ["Python", "ml"],
+      ["Matplotlib", "ml"],
     ]),
   },
   {
-    id: 1,
-    title: "ML Engineer",
-    company: "Open City Labs",
-    period: "Dec 2024 - Present",
+    id: 4,
+    title: "Software Engineer",
+    company: "Levytation",
+    period: "May 2024 - Aug 2024",
     description:
-      "Developing REST APIs for interoperability between different healthcare systems utilizing vector similarity search and AI/ML models.",
+      "Developed time series forecasting pipeline using XGBoost and LSTM Neural Networks, achieving 90% accuracy. Built Flask REST API with MongoDB caching and implemented BERT-based sentiment analysis system.",
     skills: new Map([
-      ["Milvus", "database"],
+      ["Flask", "backend"],
       ["MongoDB", "database"],
-      ["FastAPI", "backend"],
       ["Python", "backend"],
-      ["Docker", "devops"], // Changed from "devops"
-    ]),
-  },
-  {
-    id: 1,
-    title: "ML Engineer",
-    company: "Open City Labs",
-    period: "Dec 2024 - Present",
-    description:
-      "Developing REST APIs for interoperability between different healthcare systems utilizing vector similarity search and AI/ML models.",
-    skills: new Map([
-      ["Milvus", "database"],
-      ["MongoDB", "database"],
-      ["FastAPI", "backend"],
-      ["Python", "backend"],
-      ["Docker", "devops"], // Changed from "devops"
+      ["Tensorflow", "ml"],
+      ["Modal", "devops"],
     ]),
   },
 ];

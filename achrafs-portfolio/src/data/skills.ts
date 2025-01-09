@@ -59,7 +59,6 @@ export interface SkillCategory {
   category: Category;
   skills: Skill[];
 }
-
 export const skills: SkillCategory[] = [
   {
     category: "frontend",
@@ -70,6 +69,7 @@ export const skills: SkillCategory[] = [
       { name: "TypeScript", category: "frontend" },
       { name: "React", category: "frontend" },
       { name: "Tailwind CSS", category: "frontend" },
+      { name: "Framer-Motion", category: "frontend" },
     ],
   },
   {
@@ -90,11 +90,15 @@ export const skills: SkillCategory[] = [
       { name: "MongoDB", category: "database" },
       { name: "PostgreSQL", category: "database" },
       { name: "Milvus", category: "database" },
+      { name: "Vector Databases", category: "database" },
     ],
   },
   {
     category: "devops",
-    skills: [{ name: "Docker", category: "devops" }],
+    skills: [
+      { name: "Docker", category: "devops" },
+      { name: "Modal", category: "devops" },
+    ],
   },
   {
     category: "ml",
@@ -106,6 +110,11 @@ export const skills: SkillCategory[] = [
       { name: "Pandas", category: "ml" },
       { name: "NumPy", category: "ml" },
       { name: "Matplotlib", category: "ml" },
+      { name: "OCR", category: "ml" },
+      { name: "Retrieval Augmented Generation", category: "ml" },
+      { name: "LLMs", category: "ml" },
+      { name: "XGBoost", category: "ml" },
+      { name: "Time Series", category: "ml" },
     ],
   },
   {
@@ -117,37 +126,3 @@ export const skills: SkillCategory[] = [
     ],
   },
 ];
-
-// export const skills: Skill[] = [
-//   { name: "HTML5", category: "frontend" },
-//   { name: "CSS3", category: "frontend" },
-//   { name: "JavaScript (ES6+)", category: "frontend" },
-//   { name: "TypeScript", category: "frontend" },
-//   { name: "React", category: "frontend" },
-//   { name: "Tailwind CSS", category: "frontend" },
-
-//   { name: "Python", category: "backend" },
-//   { name: "Java", category: "backend" },
-//   { name: "JavaScript (ES6+)", category: "backend" },
-//   { name: "TypeScript", category: "backend" },
-//   { name: "Node.js", category: "backend" },
-//   { name: "Express.js", category: "backend" },
-//   { name: "Flask", category: "backend" },
-
-//   { name: "MongoDB", category: "database" },
-//   { name: "PostgreSQL", category: "database" },
-
-//   { name: "Docker", category: "devops" },
-
-//   { name: "Python", category: "ml" },
-//   { name: "TensorFlow", category: "ml" },
-//   { name: "PyTorch", category: "ml" },
-//   { name: "Scikit-learn", category: "ml" },
-//   { name: "Pandas", category: "ml" },
-//   { name: "NumPy", category: "ml" },
-//   { name: "Matplotlib", category: "ml" },
-
-//   { name: "Git", category: "other" },
-//   { name: "Jira", category: "other" },
-//   { name: "Confluence", category: "other" },
-// ];
