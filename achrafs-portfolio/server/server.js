@@ -178,7 +178,7 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post("/sendContactFormSubmission", (req, res) => {
-  const { name, email, subject, message } = req.query;
+  const { name, email, subject, message } = req.body;
 
   const mailOptions = {
     from: senderEmail,
