@@ -1,0 +1,962 @@
+{
+  "viewer": {
+    "contributionsThisMonth": {
+      "totalCommitContributions": 17,
+      "totalPullRequestContributions": 2,
+      "totalPullRequestReviewContributions": 0,
+      "totalIssueContributions": 0,
+      "restrictedContributionsCount": 0
+    },
+    "contributionsThisYear": {
+      "totalCommitContributions": 17,
+      "totalPullRequestContributions": 2,
+      "totalPullRequestReviewContributions": 0,
+      "totalIssueContributions": 0,
+      "restrictedContributionsCount": 0
+    },
+    "repositories": {
+      "edges": [
+        {
+          "node": {
+            "name": "Portfolio-Website",
+            "url": "https://github.com/AchrafAzzaoui/Portfolio-Website",
+            "updatedAt": "2025-01-09T05:40:24Z",
+            "languages": {
+              "totalSize": 1043259,
+              "edges": [
+                {
+                  "size": 1001463,
+                  "node": {
+                    "color": "#3178c6",
+                    "name": "TypeScript"
+                  }
+                },
+                {
+                  "size": 35521,
+                  "node": {
+                    "color": "#f1e05a",
+                    "name": "JavaScript"
+                  }
+                },
+                {
+                  "size": 3362,
+                  "node": {
+                    "color": "#663399",
+                    "name": "CSS"
+                  }
+                },
+                {
+                  "size": 2913,
+                  "node": {
+                    "color": "#e34c26",
+                    "name": "HTML"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "van-life",
+            "url": "https://github.com/AchrafAzzaoui/van-life",
+            "updatedAt": "2025-01-02T20:59:28Z",
+            "languages": {
+              "totalSize": 5477,
+              "edges": [
+                {
+                  "size": 2542,
+                  "node": {
+                    "color": "#663399",
+                    "name": "CSS"
+                  }
+                },
+                {
+                  "size": 2228,
+                  "node": {
+                    "color": "#f1e05a",
+                    "name": "JavaScript"
+                  }
+                },
+                {
+                  "size": 707,
+                  "node": {
+                    "color": "#e34c26",
+                    "name": "HTML"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Cafe-Review-and-Order-Data-Analysis-using-NLP-and-Time-Series-Forecasting",
+            "url": "https://github.com/AchrafAzzaoui/Cafe-Review-and-Order-Data-Analysis-using-NLP-and-Time-Series-Forecasting",
+            "updatedAt": "2025-01-02T20:39:18Z",
+            "languages": {
+              "totalSize": 6515705,
+              "edges": [
+                {
+                  "size": 6515705,
+                  "node": {
+                    "color": "#DA5B0B",
+                    "name": "Jupyter Notebook"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "AssemblyEndgame",
+            "url": "https://github.com/AchrafAzzaoui/AssemblyEndgame",
+            "updatedAt": "2024-12-26T03:10:21Z",
+            "languages": {
+              "totalSize": 253811,
+              "edges": [
+                {
+                  "size": 169229,
+                  "node": {
+                    "color": "#663399",
+                    "name": "CSS"
+                  }
+                },
+                {
+                  "size": 82689,
+                  "node": {
+                    "color": "#f1e05a",
+                    "name": "JavaScript"
+                  }
+                },
+                {
+                  "size": 1893,
+                  "node": {
+                    "color": "#e34c26",
+                    "name": "HTML"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Chef_Claude--React_Course_Scrimba_Project",
+            "url": "https://github.com/AchrafAzzaoui/Chef_Claude--React_Course_Scrimba_Project",
+            "updatedAt": "2024-12-24T04:15:54Z",
+            "languages": {
+              "totalSize": 52012,
+              "edges": [
+                {
+                  "size": 35368,
+                  "node": {
+                    "color": "#f1e05a",
+                    "name": "JavaScript"
+                  }
+                },
+                {
+                  "size": 15930,
+                  "node": {
+                    "color": "#663399",
+                    "name": "CSS"
+                  }
+                },
+                {
+                  "size": 714,
+                  "node": {
+                    "color": "#e34c26",
+                    "name": "HTML"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "opencitylabs-shie360",
+            "url": "https://github.com/iGiveMore/opencitylabs-shie360",
+            "updatedAt": "2024-12-23T02:58:02Z",
+            "languages": {
+              "totalSize": 0,
+              "edges": []
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Open_City_Labs_Internship",
+            "url": "https://github.com/AchrafAzzaoui/Open_City_Labs_Internship",
+            "updatedAt": "2024-12-18T02:29:07Z",
+            "languages": {
+              "totalSize": 0,
+              "edges": []
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Strategy_RA_Research_Entreprenurial_Political_Polarization",
+            "url": "https://github.com/AchrafAzzaoui/Strategy_RA_Research_Entreprenurial_Political_Polarization",
+            "updatedAt": "2024-12-10T22:23:55Z",
+            "languages": {
+              "totalSize": 947,
+              "edges": [
+                {
+                  "size": 947,
+                  "node": {
+                    "color": "#DA5B0B",
+                    "name": "Jupyter Notebook"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "homework-6-AchrafAzzaoui",
+            "url": "https://github.com/RiceComp215-Fall24/homework-6-AchrafAzzaoui",
+            "updatedAt": "2024-12-07T21:44:51Z",
+            "languages": {
+              "totalSize": 469289,
+              "edges": [
+                {
+                  "size": 463313,
+                  "node": {
+                    "color": "#b07219",
+                    "name": "Java"
+                  }
+                },
+                {
+                  "size": 5976,
+                  "node": {
+                    "color": "#3572A5",
+                    "name": "Python"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "act-website",
+            "url": "https://github.com/jgr121/act-website",
+            "updatedAt": "2024-12-07T20:52:14Z",
+            "languages": {
+              "totalSize": 72788,
+              "edges": [
+                {
+                  "size": 65056,
+                  "node": {
+                    "color": "#3178c6",
+                    "name": "TypeScript"
+                  }
+                },
+                {
+                  "size": 4624,
+                  "node": {
+                    "color": "#663399",
+                    "name": "CSS"
+                  }
+                },
+                {
+                  "size": 3108,
+                  "node": {
+                    "color": "#f1e05a",
+                    "name": "JavaScript"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "cachelab-AchrafAzzaoui",
+            "url": "https://github.com/RICE-COMP222-F24/cachelab-AchrafAzzaoui",
+            "updatedAt": "2024-12-07T05:02:38Z",
+            "languages": {
+              "totalSize": 29485,
+              "edges": [
+                {
+                  "size": 23430,
+                  "node": {
+                    "color": "#555555",
+                    "name": "C"
+                  }
+                },
+                {
+                  "size": 5430,
+                  "node": {
+                    "color": "#3572A5",
+                    "name": "Python"
+                  }
+                },
+                {
+                  "size": 625,
+                  "node": {
+                    "color": "#427819",
+                    "name": "Makefile"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "ERCOT_Price_Prediction_Stat_413_Final_Project",
+            "url": "https://github.com/AchrafAzzaoui/ERCOT_Price_Prediction_Stat_413_Final_Project",
+            "updatedAt": "2024-12-01T06:05:07Z",
+            "languages": {
+              "totalSize": 4823330,
+              "edges": [
+                {
+                  "size": 4817422,
+                  "node": {
+                    "color": "#DA5B0B",
+                    "name": "Jupyter Notebook"
+                  }
+                },
+                {
+                  "size": 5908,
+                  "node": {
+                    "color": "#3572A5",
+                    "name": "Python"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "linkinglab-AchrafAzzaoui",
+            "url": "https://github.com/RICE-COMP222-F24/linkinglab-AchrafAzzaoui",
+            "updatedAt": "2024-11-15T22:32:20Z",
+            "languages": {
+              "totalSize": 36652,
+              "edges": [
+                {
+                  "size": 30876,
+                  "node": {
+                    "color": "#555555",
+                    "name": "C"
+                  }
+                },
+                {
+                  "size": 5246,
+                  "node": {
+                    "color": "#0298c3",
+                    "name": "Perl"
+                  }
+                },
+                {
+                  "size": 530,
+                  "node": {
+                    "color": "#427819",
+                    "name": "Makefile"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "homework-5-AchrafAzzaoui",
+            "url": "https://github.com/RiceComp215-Fall24/homework-5-AchrafAzzaoui",
+            "updatedAt": "2024-11-12T18:38:15Z",
+            "languages": {
+              "totalSize": 368439,
+              "edges": [
+                {
+                  "size": 363537,
+                  "node": {
+                    "color": "#b07219",
+                    "name": "Java"
+                  }
+                },
+                {
+                  "size": 4902,
+                  "node": {
+                    "color": "#3572A5",
+                    "name": "Python"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "attacklab-AchrafAzzaoui",
+            "url": "https://github.com/RICE-COMP222-F24/attacklab-AchrafAzzaoui",
+            "updatedAt": "2024-10-29T18:24:27Z",
+            "languages": {
+              "totalSize": 276,
+              "edges": [
+                {
+                  "size": 276,
+                  "node": {
+                    "color": "#427819",
+                    "name": "Makefile"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "homework-4-AchrafAzzaoui",
+            "url": "https://github.com/RiceComp215-Fall24/homework-4-AchrafAzzaoui",
+            "updatedAt": "2024-10-28T16:54:02Z",
+            "languages": {
+              "totalSize": 200772,
+              "edges": [
+                {
+                  "size": 195870,
+                  "node": {
+                    "color": "#b07219",
+                    "name": "Java"
+                  }
+                },
+                {
+                  "size": 4902,
+                  "node": {
+                    "color": "#3572A5",
+                    "name": "Python"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "homework-3-AchrafAzzaoui",
+            "url": "https://github.com/RiceComp215-Fall24/homework-3-AchrafAzzaoui",
+            "updatedAt": "2024-10-19T19:14:01Z",
+            "languages": {
+              "totalSize": 150241,
+              "edges": [
+                {
+                  "size": 150126,
+                  "node": {
+                    "color": "#b07219",
+                    "name": "Java"
+                  }
+                },
+                {
+                  "size": 115,
+                  "node": {
+                    "color": "#3572A5",
+                    "name": "Python"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "homework-3-provided-tests-AchrafAzzaoui",
+            "url": "https://github.com/RiceComp215-Fall24/homework-3-provided-tests-AchrafAzzaoui",
+            "updatedAt": "2024-10-17T03:22:13Z",
+            "languages": {
+              "totalSize": 54232,
+              "edges": [
+                {
+                  "size": 50114,
+                  "node": {
+                    "color": "#b07219",
+                    "name": "Java"
+                  }
+                },
+                {
+                  "size": 4118,
+                  "node": {
+                    "color": "#3572A5",
+                    "name": "Python"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "bomblab-AchrafAzzaoui",
+            "url": "https://github.com/RICE-COMP222-F24/bomblab-AchrafAzzaoui",
+            "updatedAt": "2024-10-15T17:10:04Z",
+            "languages": {
+              "totalSize": 267,
+              "edges": [
+                {
+                  "size": 267,
+                  "node": {
+                    "color": "#427819",
+                    "name": "Makefile"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Hands-On-Machine-Learning-book",
+            "url": "https://github.com/AchrafAzzaoui/Hands-On-Machine-Learning-book",
+            "updatedAt": "2024-10-11T00:05:01Z",
+            "languages": {
+              "totalSize": 0,
+              "edges": []
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Strategy_RA_Research_2024-2025",
+            "url": "https://github.com/AchrafAzzaoui/Strategy_RA_Research_2024-2025",
+            "updatedAt": "2024-10-03T18:15:43Z",
+            "languages": {
+              "totalSize": 89707,
+              "edges": [
+                {
+                  "size": 89707,
+                  "node": {
+                    "color": "#DA5B0B",
+                    "name": "Jupyter Notebook"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "alfred-outfit-recommender",
+            "url": "https://github.com/AchrafAzzaoui/alfred-outfit-recommender",
+            "updatedAt": "2024-09-30T04:41:37Z",
+            "languages": {
+              "totalSize": 52152,
+              "edges": [
+                {
+                  "size": 52152,
+                  "node": {
+                    "color": "#3572A5",
+                    "name": "Python"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "homework-2-AchrafAzzaoui",
+            "url": "https://github.com/RiceComp215-Fall24/homework-2-AchrafAzzaoui",
+            "updatedAt": "2024-09-28T18:08:50Z",
+            "languages": {
+              "totalSize": 35459,
+              "edges": [
+                {
+                  "size": 35459,
+                  "node": {
+                    "color": "#b07219",
+                    "name": "Java"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "countlab-AchrafAzzaoui",
+            "url": "https://github.com/RICE-COMP222-F24/countlab-AchrafAzzaoui",
+            "updatedAt": "2024-09-28T03:32:59Z",
+            "languages": {
+              "totalSize": 13861,
+              "edges": [
+                {
+                  "size": 8148,
+                  "node": {
+                    "color": "#555555",
+                    "name": "C"
+                  }
+                },
+                {
+                  "size": 5191,
+                  "node": {
+                    "color": "#0298c3",
+                    "name": "Perl"
+                  }
+                },
+                {
+                  "size": 522,
+                  "node": {
+                    "color": "#427819",
+                    "name": "Makefile"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "homework-2-provided-tests-AchrafAzzaoui",
+            "url": "https://github.com/RiceComp215-Fall24/homework-2-provided-tests-AchrafAzzaoui",
+            "updatedAt": "2024-09-27T21:56:56Z",
+            "languages": {
+              "totalSize": 29565,
+              "edges": [
+                {
+                  "size": 29565,
+                  "node": {
+                    "color": "#b07219",
+                    "name": "Java"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "hackrice-2024",
+            "url": "https://github.com/AchrafAzzaoui/hackrice-2024",
+            "updatedAt": "2024-09-22T13:23:00Z",
+            "languages": {
+              "totalSize": 511690,
+              "edges": [
+                {
+                  "size": 381128,
+                  "node": {
+                    "color": "#3572A5",
+                    "name": "Python"
+                  }
+                },
+                {
+                  "size": 122567,
+                  "node": {
+                    "color": "#f1e05a",
+                    "name": "JavaScript"
+                  }
+                },
+                {
+                  "size": 6232,
+                  "node": {
+                    "color": "#663399",
+                    "name": "CSS"
+                  }
+                },
+                {
+                  "size": 1721,
+                  "node": {
+                    "color": "#e34c26",
+                    "name": "HTML"
+                  }
+                },
+                {
+                  "size": 42,
+                  "node": {
+                    "color": "#89e051",
+                    "name": "Shell"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "basic-i-o-in-c-AchrafAzzaoui",
+            "url": "https://github.com/RICE-COMP222-F24/basic-i-o-in-c-AchrafAzzaoui",
+            "updatedAt": "2024-09-16T17:47:55Z",
+            "languages": {
+              "totalSize": 1469,
+              "edges": [
+                {
+                  "size": 1469,
+                  "node": {
+                    "color": "#555555",
+                    "name": "C"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "datalab-AchrafAzzaoui",
+            "url": "https://github.com/RICE-COMP222-F24/datalab-AchrafAzzaoui",
+            "updatedAt": "2024-09-14T03:46:37Z",
+            "languages": {
+              "totalSize": 46068,
+              "edges": [
+                {
+                  "size": 36963,
+                  "node": {
+                    "color": "#555555",
+                    "name": "C"
+                  }
+                },
+                {
+                  "size": 8555,
+                  "node": {
+                    "color": "#0298c3",
+                    "name": "Perl"
+                  }
+                },
+                {
+                  "size": 550,
+                  "node": {
+                    "color": "#427819",
+                    "name": "Makefile"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "homework-1-AchrafAzzaoui",
+            "url": "https://github.com/RiceComp215-Fall24/homework-1-AchrafAzzaoui",
+            "updatedAt": "2024-09-12T16:46:16Z",
+            "languages": {
+              "totalSize": 12460,
+              "edges": [
+                {
+                  "size": 12460,
+                  "node": {
+                    "color": "#b07219",
+                    "name": "Java"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "introduction-to-c-AchrafAzzaoui",
+            "url": "https://github.com/RICE-COMP222-F24/introduction-to-c-AchrafAzzaoui",
+            "updatedAt": "2024-08-31T02:22:09Z",
+            "languages": {
+              "totalSize": 657,
+              "edges": [
+                {
+                  "size": 657,
+                  "node": {
+                    "color": "#555555",
+                    "name": "C"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "installation-AchrafAzzaoui",
+            "url": "https://github.com/RiceComp215-Fall24/installation-AchrafAzzaoui",
+            "updatedAt": "2024-08-27T19:30:09Z",
+            "languages": {
+              "totalSize": 346,
+              "edges": [
+                {
+                  "size": 346,
+                  "node": {
+                    "color": "#b07219",
+                    "name": "Java"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "lumina-creative",
+            "url": "https://github.com/AchrafAzzaoui/lumina-creative",
+            "updatedAt": "2024-08-25T19:37:22Z",
+            "languages": {
+              "totalSize": 27602,
+              "edges": [
+                {
+                  "size": 24220,
+                  "node": {
+                    "color": "#e34c26",
+                    "name": "HTML"
+                  }
+                },
+                {
+                  "size": 3382,
+                  "node": {
+                    "color": "#663399",
+                    "name": "CSS"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Pricing-Analysis-Models",
+            "url": "https://github.com/Levytation/Pricing-Analysis-Models",
+            "updatedAt": "2024-08-05T15:10:40Z",
+            "languages": {
+              "totalSize": 3988804,
+              "edges": [
+                {
+                  "size": 3988804,
+                  "node": {
+                    "color": "#DA5B0B",
+                    "name": "Jupyter Notebook"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "levytation-backend",
+            "url": "https://github.com/Levytation/levytation-backend",
+            "updatedAt": "2024-07-16T16:21:37Z",
+            "languages": {
+              "totalSize": 170213,
+              "edges": [
+                {
+                  "size": 169472,
+                  "node": {
+                    "color": "#3572A5",
+                    "name": "Python"
+                  }
+                },
+                {
+                  "size": 741,
+                  "node": {
+                    "color": "#384d54",
+                    "name": "Dockerfile"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "MLCheatsheets",
+            "url": "https://github.com/AchrafAzzaoui/MLCheatsheets",
+            "updatedAt": "2024-06-30T05:19:58Z",
+            "languages": {
+              "totalSize": 3282375,
+              "edges": [
+                {
+                  "size": 3282375,
+                  "node": {
+                    "color": "#DA5B0B",
+                    "name": "Jupyter Notebook"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "AchrafAzzaoui",
+            "url": "https://github.com/AchrafAzzaoui/AchrafAzzaoui",
+            "updatedAt": "2024-03-12T00:32:02Z",
+            "languages": {
+              "totalSize": 0,
+              "edges": []
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Rice-Datathon-",
+            "url": "https://github.com/AchrafAzzaoui/Rice-Datathon-",
+            "updatedAt": "2024-03-11T06:50:36Z",
+            "languages": {
+              "totalSize": 2568791,
+              "edges": [
+                {
+                  "size": 2568791,
+                  "node": {
+                    "color": "#DA5B0B",
+                    "name": "Jupyter Notebook"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "Strategy-RA-Research-Exercise",
+            "url": "https://github.com/AchrafAzzaoui/Strategy-RA-Research-Exercise",
+            "updatedAt": "2024-03-11T06:45:49Z",
+            "languages": {
+              "totalSize": 856551,
+              "edges": [
+                {
+                  "size": 856551,
+                  "node": {
+                    "color": "#DA5B0B",
+                    "name": "Jupyter Notebook"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "node": {
+            "name": "GRCMainStreet",
+            "url": "https://github.com/benwillallen/GRCMainStreet",
+            "updatedAt": "2023-11-08T00:06:14Z",
+            "languages": {
+              "totalSize": 20812691,
+              "edges": [
+                {
+                  "size": 20808498,
+                  "node": {
+                    "color": "#DA5B0B",
+                    "name": "Jupyter Notebook"
+                  }
+                },
+                {
+                  "size": 2238,
+                  "node": {
+                    "color": "#3572A5",
+                    "name": "Python"
+                  }
+                },
+                {
+                  "size": 1955,
+                  "node": {
+                    "color": "#198CE7",
+                    "name": "R"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}
