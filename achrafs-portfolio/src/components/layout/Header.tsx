@@ -87,26 +87,37 @@ export default function Header() {
             <a href="https://github.com/AchrafAzzaoui">
               <FaGithub className="text-3xl rounded-full text-dark-text-primary hover:text-purple-500 hover:scale-110" />
             </a>
-            <button
-              style={{
-                zIndex: 10,
-                border: "2px solid #8B5CF6",
-                position: "relative",
-                borderRadius: "0.275rem",
-                overflow: "hidden",
+            <a
+              href="#contact"
+              className="no-underline"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="
-                inline-block px-7 py-2 font-semibold font-display bg-transparent text-white group
-                hover:border-purple-500
-                before:absolute before:content-[''] before:inset-0
-                before:-translate-x-full before:bg-gradient-to-r before:from-purple-600
-                before:to-purple-800 before:z-0
-                before:transition-transform before:duration-300 before:ease-out
-                hover:before:translate-x-0
-              "
             >
-              <span className="relative z-10 text-lg">Contact</span>
-            </button>
+              <button
+                style={{
+                  zIndex: 10,
+                  border: "2px solid #8B5CF6",
+                  position: "relative",
+                  borderRadius: "0.275rem",
+                  overflow: "hidden",
+                }}
+                className="
+      inline-block px-7 py-2 font-semibold font-display bg-transparent text-white group
+      hover:border-purple-500
+      before:absolute before:content-[''] before:inset-0
+      before:-translate-x-full before:bg-gradient-to-r before:from-purple-600
+      before:to-purple-800 before:z-0
+      before:transition-transform before:duration-300 before:ease-out
+      hover:before:translate-x-0
+    "
+              >
+                <span className="relative z-10 text-lg">Contact</span>
+              </button>
+            </a>
           </div>
           <div className="md:hidden basis-3/16 flex-auto flex justify-end px-8 items-center">
             <button
@@ -179,13 +190,23 @@ export default function Header() {
                         <RxLinkedinLogo className="text-3xl" />
                       </a>
                     </div>
-
-                    <button
-                      onClick={() => setIsMenuOpen(false)}
-                      className="w-full py-3 bg-purple-600 hover:bg-purple-700 transition-colors rounded text-white font-medium"
+                    <a
+                      href="#contact"
+                      className="no-underline"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        document
+                          .getElementById("contact")
+                          ?.scrollIntoView({ behavior: "smooth" });
+                      }}
                     >
-                      Contact
-                    </button>
+                      <button
+                        onClick={() => setIsMenuOpen(false)}
+                        className="w-full py-3 bg-purple-600 hover:bg-purple-700 transition-colors rounded text-white font-medium"
+                      >
+                        Contact
+                      </button>
+                    </a>
                   </div>
                 </div>
               </motion.div>

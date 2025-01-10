@@ -4,7 +4,7 @@ import LanguageChart from "./LangaugeChart";
 import useGithubProfileStats from "../../hooks/fetchGithubData";
 
 export default function GithubStatsSection() {
-  const apiUrl = "/githubProfileStats";
+  const apiUrl = "githubProfileStats";
   const { data, loading, error } = useGithubProfileStats(apiUrl);
 
   if (loading) return <div>Loading...</div>;
