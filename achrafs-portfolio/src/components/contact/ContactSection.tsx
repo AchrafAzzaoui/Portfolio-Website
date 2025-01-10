@@ -76,7 +76,10 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="w-full flex justify-center items-center py-16 md:py-36">
+    <section
+      className="w-full flex justify-center items-center py-16 md:py-36"
+      id="contact"
+    >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
