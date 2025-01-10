@@ -6,16 +6,26 @@ import path from "path";
 import { fileURLToPath } from "url";
 import nodeCron from "node-cron";
 import { GraphQLClient, gql } from "graphql-request";
+import nodemailer from "nodemailer";
+import rateLimit from "express-rate-limit";
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+});
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(limiter);
+
 const PORT = process.env.PORT || 5000;
 
 const apiKey = process.env.GITHUB_API_KEY;
+app.use(cors());
+
 if (!apiKey) {
   throw new Error("GITHUB_API_KEY is required");
 }
@@ -27,6 +37,9 @@ const graphQLClient = new GraphQLClient(url, {
 });
 
 const filePath = path.join(__dirname, "githubData.json");
+const senderEmail = process.env.EMAIL_ACCOUNT;
+const senderPassword = process.env.EMAIL_PASSWORD;
+const recipientEmail = "aa270@rice.edu";
 
 const getDynamicDateRanges = () => {
   const now = new Date();
@@ -137,11 +150,6 @@ const fetchAndCacheGitHubData = async () => {
   }
 };
 
-nodeCron.schedule("0 0 * * *", () => {
-  console.log("Scheduled task running: Fetching GitHub data...");
-  fetchAndCacheGitHubData();
-});
-
 app.get("/githubProfileStats", (req, res) => {
   if (fs.existsSync(filePath)) {
     const fileStats = fs.statSync(filePath);
@@ -159,6 +167,35 @@ app.get("/githubProfileStats", (req, res) => {
     .catch((error) => {
       res.status(500).json({ error: error.message });
     });
+});
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: senderEmail,
+    pass: senderPassword,
+  },
+});
+
+app.post("/sendContactFormSubmission", (req, res) => {
+  const { name, email, subject, message } = req.query;
+
+  const mailOptions = {
+    from: senderEmail,
+    to: recipientEmail,
+    subject: subject,
+    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log(error);
+      res.status(500).send("Error sending email");
+    } else {
+      console.log("Email sent: " + info.response);
+      res.send("Email sent successfully");
+    }
+  });
 });
 
 app.listen(PORT, () => {

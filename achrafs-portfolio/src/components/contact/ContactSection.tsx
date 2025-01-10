@@ -17,7 +17,6 @@ export default function ContactForm() {
     message: "",
   });
 
-  // Keeping your existing validation logic
   const validateForm = () => {
     let isValid = true;
     const newErrors = { name: "", email: "", subject: "", message: "" };

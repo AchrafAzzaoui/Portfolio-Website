@@ -8,7 +8,7 @@ export default function GithubStatsSection() {
   const { data, loading, error } = useGithubProfileStats(apiUrl);
 
   if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+  if (error) return <div></div>;
   if (!data) return null;
 
   return (
