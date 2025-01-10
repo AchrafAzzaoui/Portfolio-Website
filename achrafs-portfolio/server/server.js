@@ -177,25 +177,40 @@ const transporter = nodemailer.createTransport({
     user: senderEmail,
     pass: senderPassword,
   },
+  debug: true, // Add this to get detailed logs
 });
 
+// Test the transporter when server starts
+transporter.verify(function (error, success) {
+  if (error) {
+    console.log("Transporter error:", error);
+  } else {
+    console.log("Server is ready to take our messages");
+  }
+});
 app.post("/sendContactFormSubmission", (req, res) => {
+  console.log("Request body:", req.body); // Debug incoming data
+  console.log("Sender email configured:", senderEmail); // Check if env vars are loaded
+
   const { name, email, subject, message } = req.body;
 
   const mailOptions = {
     from: senderEmail,
     to: recipientEmail,
-    subject: subject,
+    subject: subject || "New Contact Form Submission", // Fallback subject
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.log(error);
-      res.status(500).send("Error sending email");
+      console.log("Detailed error:", error); // More detailed error logging
+      return res.status(500).json({
+        message: "Error sending email",
+        error: error.message,
+      });
     } else {
       console.log("Email sent: " + info.response);
-      res.send("Email sent successfully");
+      res.json({ message: "Email sent successfully" });
     }
   });
 });
