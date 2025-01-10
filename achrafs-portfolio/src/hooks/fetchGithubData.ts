@@ -46,7 +46,9 @@ const useGithubProfileStats = (apiUrl: string) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000${apiUrl}`);
+        const response = await fetch(
+          `https://portfolio-website-iiqs.onrender.com/${apiUrl}`
+        );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
