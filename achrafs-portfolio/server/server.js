@@ -101,6 +101,7 @@ const fetchAndCacheGitHubData = async () => {
           edges {
             node {
               name
+              url
               updatedAt
               languages(first: 10, orderBy: { field: SIZE, direction: DESC }) {
                 totalSize
