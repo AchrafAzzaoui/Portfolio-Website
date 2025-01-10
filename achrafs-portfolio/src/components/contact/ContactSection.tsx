@@ -48,10 +48,19 @@ export default function ContactForm() {
     return isValid;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log("Form submitted:", formState);
+      const response = await fetch(
+        "https://portfolio-website-iiqs.onrender.com/sendContactFormSubmission",
+        {
+          method: "POST",
+          body: JSON.stringify(formState),
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+      const data = await response.json();
+      console.log(data);
       setFormState({ name: "", email: "", subject: "", message: "" });
     }
   };
