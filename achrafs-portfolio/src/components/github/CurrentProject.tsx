@@ -30,7 +30,7 @@ export default function CurrentProject({ repositories }: CurrentProjectProps) {
       </h4>
       <h4 className="text-4xl md:text-5xl text-dark-text-primary">{name}</h4>
       <a
-        href=""
+        href={url}
         className="text-purple-500 group flex items-center hover:text-purple-400 transition-colors duration-200"
       >
         View Project

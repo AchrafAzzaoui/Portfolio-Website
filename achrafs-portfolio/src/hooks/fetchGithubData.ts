@@ -38,11 +38,6 @@ export interface GithubData {
     };
   };
 }
-interface GithubDataHookResult {
-  data: GithubData | null;
-  loading: boolean;
-  error: Error | null;
-}
 const useGithubProfileStats = (apiUrl: string) => {
   const [data, setData] = useState<GithubData | null>(null);
   const [loading, setLoading] = useState(true);
