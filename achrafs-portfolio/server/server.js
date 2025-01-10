@@ -20,6 +20,8 @@ const __dirname = path.dirname(__filename);
 dotenv.config();
 const app = express();
 app.use(limiter);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 const PORT = process.env.PORT || 5000;
 
