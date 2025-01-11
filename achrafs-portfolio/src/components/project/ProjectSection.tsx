@@ -57,7 +57,7 @@ export default function ProjectSection() {
               <h2 className="text-5xl font-semibold text-dark-text-primary mb-12 text-center">
                 Projects
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-auto-rows-[minmax(auto, 1fr)] gap-8 mx-auto w-full max-w-7xl">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-auto-rows-[minmax(auto, 1fr)] gap-8 mx-auto w-full max-w-7xl items-stretch">
                 {currentProjects?.map((project) => (
                   <ProjectCard
                     {...project}

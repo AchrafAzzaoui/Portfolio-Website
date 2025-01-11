@@ -42,8 +42,8 @@ export default function ProjectCard({
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
-      <div className="card-gradient-hover aspect-[5/6] flex flex-col space-between rounded-[1.6rem] shadow-lg pb-4">
-        <div className="aspect-video h-[40%] relative overflow-hidden rounded-t-[1.6rem]">
+      <div className="w-full card-gradient-hover aspect-[5/6] flex flex-col space-between rounded-[1.6rem] shadow-lg pb-4">
+        <div className="aspect-video  relative overflow-hidden rounded-t-[1.6rem]">
           <img
             src={getImageUrl(image)}
             alt={title}
@@ -55,7 +55,6 @@ export default function ProjectCard({
           <h3 className="text-3xl font-display text-dark-text-primary font-semibold mt-4 mb-6">
             {title}
           </h3>
-          {/* <p className="text-md text-dark-text-secondary">{description}</p> */}
 
           <button
             onClick={() => setIsModalOpen(true)}

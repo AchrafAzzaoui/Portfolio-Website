@@ -16,7 +16,7 @@ export const projects: Project[] = [
     image: "hackrice_2024_picture.png",
     title: "Protege: AI-Powered Learning Platform",
     description:
-      "An educational platform leveraging the Protégé Effect to enhance learning through teaching. Built a knowledge graph-based system that processes textbook PDFs, constructs learning paths, and generates interactive quizzes. Implements vector embeddings and semantic search to enable intelligent content retrieval and personalized learning sequences.",
+      "An educational platform designed to enhance learning through the Protégé Effect. The system processes textbook PDFs into a knowledge graph, generates interactive learning paths, and creates quizzes. Leveraged vector embeddings, semantic search, and LLMs to provide intelligent content retrieval and personalized experiences. Won Best Use of AI and Best Use of MongoDB at HackRice 2024.",
     skills: [
       { name: "React", category: "frontend" },
       { name: "Node.js", category: "backend" },
@@ -30,9 +30,9 @@ export const projects: Project[] = [
   {
     id: 2,
     image: "datathon_2024_picture.png",
-    title: "ELO-based MLB Game Predictor",
+    title: "ELO-Based MLB Game Predictor",
     description:
-      "Developed a machine learning system to analyze the impact of travel fatigue on MLB team performance. Implemented an ELO rating system with pitcher hot-hand adjustments, achieving a 0.61 AUC-ROC score. Created data pipelines to process geographic and temporal features including circadian advantage and travel distance using the Haversine formula.",
+      "A machine learning system analyzing the impact of travel fatigue on MLB team performance using an ELO rating system enhanced with pitcher hot-hand adjustments. Achieved a 0.61 AUC-ROC score by processing geographic and temporal features, including circadian advantages and travel distances with the Haversine formula. Won 2nd Place at the 2024 Rice Datathon.",
     skills: [
       { name: "Python", category: "backend" },
       { name: "XGBoost", category: "ml" },
@@ -48,12 +48,12 @@ export const projects: Project[] = [
     image: "portfolio_website_picture.png",
     title: "Personal Portfolio Website",
     description:
-      "A responsive portfolio website built with modern web technologies, featuring dynamic animations and interactive components. Implements server-side rendering for optimal performance and SEO, while maintaining a clean and professional design aesthetic.",
+      "A responsive portfolio website showcasing interactive animations and a clean, professional design. Built with React, TypeScript, and Tailwind CSS, it features dynamic, mobile-friendly components. Used Framer Motion for animations to create a polished user experience and deployed the project using Vercel.",
     skills: [
       { name: "React", category: "frontend" },
       { name: "TypeScript", category: "backend" },
       { name: "Tailwind CSS", category: "frontend" },
-      { name: "Framer-Motion", category: "frontend" },
+      { name: "Framer Motion", category: "frontend" },
     ],
     githubLink: "https://github.com/AchrafAzzaoui/Portfolio-Website",
     demoLink: "https://demo.com",
