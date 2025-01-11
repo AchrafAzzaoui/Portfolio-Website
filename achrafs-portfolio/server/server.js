@@ -76,6 +76,15 @@ const getDynamicDateRanges = () => {
     lastDayOfYear,
   };
 };
+app.get("/runDailyFetch", async (req, res) => {
+  try {
+    await fetchAndCacheGitHubData();
+    res.json({ message: "GitHub data fetched and saved successfully!" });
+  } catch (error) {
+    console.error("Error in /runDailyFetch:", error.message);
+    res.status(500).json({ error: error.message });
+  }
+});
 
 const fetchAndCacheGitHubData = async () => {
   const { firstDayOfMonth, lastDayOfMonth, firstDayOfYear, lastDayOfYear } =

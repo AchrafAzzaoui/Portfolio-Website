@@ -1,15 +1,15 @@
 {
   "viewer": {
     "contributionsThisMonth": {
-      "totalCommitContributions": 17,
-      "totalPullRequestContributions": 2,
+      "totalCommitContributions": 33,
+      "totalPullRequestContributions": 6,
       "totalPullRequestReviewContributions": 0,
       "totalIssueContributions": 0,
       "restrictedContributionsCount": 0
     },
     "contributionsThisYear": {
-      "totalCommitContributions": 17,
-      "totalPullRequestContributions": 2,
+      "totalCommitContributions": 33,
+      "totalPullRequestContributions": 6,
       "totalPullRequestReviewContributions": 0,
       "totalIssueContributions": 0,
       "restrictedContributionsCount": 0
@@ -20,19 +20,19 @@
           "node": {
             "name": "Portfolio-Website",
             "url": "https://github.com/AchrafAzzaoui/Portfolio-Website",
-            "updatedAt": "2025-01-09T05:40:24Z",
+            "updatedAt": "2025-01-11T04:02:39Z",
             "languages": {
-              "totalSize": 1043259,
+              "totalSize": 1068508,
               "edges": [
                 {
-                  "size": 1001463,
+                  "size": 1020862,
                   "node": {
                     "color": "#3178c6",
                     "name": "TypeScript"
                   }
                 },
                 {
-                  "size": 35521,
+                  "size": 41371,
                   "node": {
                     "color": "#f1e05a",
                     "name": "JavaScript"
