@@ -1,6 +1,10 @@
 # Achraf Azzaoui's Portfolio Website
 This repository contains the source code for my personal portfolio website.  The website showcases my skills, experience, and projects.
 
+## Live Demo
+My personal portfolio website can be found at the following link: https://achrafazzaoui.vercel.app/
+
+
 ## Features
 * **Responsive Design:** The website adapts seamlessly to different screen sizes (desktops, tablets, and mobile phones).
 * **Interactive Animations:** Uses Framer Motion for smooth and engaging animations.
@@ -12,7 +16,7 @@ This repository contains the source code for my personal portfolio website.  The
 * **About Section:** Introduces me and describes my interests and passions.
 
 ## Usage
-The website is designed to be viewed directly in a web browser.  To navigate, use the menu or scroll down.
+The website is designed to be viewed directly in a web browser or mobile browser.
 
 ## Technologies Used
 * **React:** A JavaScript library for building user interfaces. Used for the entire frontend of the website.
