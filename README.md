@@ -27,6 +27,3 @@ The website is designed to be viewed directly in a web browser.  To navigate, us
 * **GraphQL:** Query language for APIs. Used to fetch GitHub data.
 * **`graphql-request`:** A library for making GraphQL requests.
 * **`node-cron`:** Used to schedule automatic data fetching from GitHub.
-
-
-*README.md was made with [Etchr](https://etchr.dev)*
