@@ -82,6 +82,8 @@ export const skills: SkillCategory[] = [
       { name: "Node.js", category: "backend" },
       { name: "Express.js", category: "backend" },
       { name: "Flask", category: "backend" },
+      { name: "FastAPI", category: "backend" },
+      { name: "Assembly", category: "backend" },
     ],
   },
   {
@@ -91,6 +93,7 @@ export const skills: SkillCategory[] = [
       { name: "PostgreSQL", category: "database" },
       { name: "Milvus", category: "database" },
       { name: "Vector Databases", category: "database" },
+      { name: "Azure", category: "database" },
     ],
   },
   {
@@ -109,7 +112,7 @@ export const skills: SkillCategory[] = [
       { name: "Scikit-learn", category: "ml" },
       { name: "Pandas", category: "ml" },
       { name: "NumPy", category: "ml" },
-      { name: "Matplotlib", category: "ml" },
+      { name: "Gurobi", category: "ml" },
       { name: "RAG", category: "ml" },
       { name: "LLMs", category: "ml" },
       { name: "XGBoost", category: "ml" },

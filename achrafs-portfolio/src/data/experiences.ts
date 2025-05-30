@@ -12,25 +12,48 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     id: 1,
+    title: "Software Engineer Intern",
+    company: "RSM",
+    period: "June 2025 - Aug 2025",
+    description:
+      "Building agentic AI tools to optimize enterprise workflows using Python and Microsoft Azure cloud infrastructure.",
+    skills: new Map([
+      ["Python", "backend"],
+      ["Azure", "database"],
+    ]),
+  },
+  {
+    id: 2,
+    title: "Research Assistant",
+    company: "Rice School of Engineering",
+    period: "May 2025 - Present",
+    description:
+      "Building interactive educational tools for computer systems under the mentorship of Dr. Rebecca Schreib.",
+    skills: new Map([
+      ["Python", "backend"],
+      ["Assembly", "backend"],
+    ]),
+  },
+  {
+    id: 3,
     title: "ML Engineer",
     company: "Open City Labs",
-    period: "Dec 2024 - Present",
+    period: "Dec 2024 - Apr 2025",
     description:
-      "Developed REST APIs for healthcare data integration using vector similarity search and ML models. Implemented cross-database architecture between Milvus and MongoDB for medical terminology standardization.",
+      "Developed production RAG system and REST APIs processing medical terminology data with vector embeddings and semantic search. Implemented multi-database architecture integrating Milvus vector database and MongoDB for UMLS medical code standardization and intelligent document retrieval.",
     skills: new Map([
       ["Milvus", "database"],
       ["MongoDB", "database"],
       ["FastAPI", "backend"],
       ["Python", "backend"],
-      ["Docker", "devops"],
       ["LLMs", "ml"],
     ]),
   },
   {
-    id: 2,
+    id: 4,
     title: "Data Science RA",
     company: "Jones School of Business",
-    period: "Jan 2024 - Present",
+    period: "Jan 2024 - Jan 2025",
     description:
       "Engineered ETL pipelines using Google Cloud and BigQuery to process over 1TB of foottraffic data. Implemented causal inference analysis using difference-in-differences methodology and propensity score matching.",
     skills: new Map([
@@ -42,21 +65,7 @@ export const experiences: Experience[] = [
     ]),
   },
   {
-    id: 3,
-    title: "Technical Analyst",
-    company: "ACT Rice Consulting",
-    period: "Jan 2024 - Present",
-    description:
-      "Increased nonprofit program evaluation accuracy through data analysis and interactive visualizations. Developing a responsive student recruitment portal using React and Tailwind CSS.",
-    skills: new Map([
-      ["React", "frontend"],
-      ["Tailwind CSS", "frontend"],
-      ["Python", "ml"],
-      ["Matplotlib", "ml"],
-    ]),
-  },
-  {
-    id: 4,
+    id: 5,
     title: "Software Engineer",
     company: "Levytation",
     period: "May 2024 - Aug 2024",

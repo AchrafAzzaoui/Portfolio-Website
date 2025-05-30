@@ -13,6 +13,36 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    image: "REMS.png", // You'll need to add the actual image
+    title: "Rice EMS Scheduling Optimizer",
+    description:
+      "A comprehensive scheduling optimization platform for Rice Emergency Medical Services that reduced manual scheduling time by 90% and streamlined shift assignments for over 60 active members. Built with FastAPI backend integrating Gurobi mixed-integer optimization solver to maximize fairness, minimize conflicts, and enforce role-specific coverage constraints. Features secure Google OAuth authentication, Google Calendar API integration for shift exports, and a dynamic React frontend with live editing, shift swapping, and real-time statistics tracking.",
+    skills: [
+      { name: "React", category: "frontend" },
+      { name: "FastAPI", category: "backend" },
+      { name: "Python", category: "backend" },
+      { name: "Gurobi", category: "ml" },
+    ],
+    githubLink:
+      "https://github.com/AchrafAzzaoui/REMS-Scheduling-Optimizer-INFORMS",
+    demoLink:
+      "https://www.loom.com/share/a5425781bde14b6ba6acbc79f735f57a?sid=4eff4238-7e27-416d-861a-a993a4368288",
+  },
+  {
+    id: 2,
+    image: "SignLingo.png", // You'll need to add the actual image
+    title: "SignLingo: Real-Time ASL Gloss Translator and Feedback System",
+    description:
+      "An end-to-end platform for English-to-ASL gloss translation with real-time signing accuracy feedback. Trained T5 and BART Transformer models achieving BLEU scores up to 99.2 on synthetic data and 33.5 on real-world datasets. Built a Swin 3D video classifier with skeletal keypoints achieving 87.3% Top-10 accuracy. Integrated CLIP visual matching and MediaPipe tracking for real-time sign verification and corrective feedback.",
+    skills: [
+      { name: "Python", category: "backend" },
+      { name: "PyTorch", category: "ml" },
+    ],
+    githubLink: "https://github.com/j00lee/SignLingo",
+    demoLink: "https://github.com/j00lee/SignLingo",
+  },
+  {
+    id: 3,
     image: "hackrice_2024_picture.png",
     title: "Protege: AI-Powered Learning Platform",
     description:
@@ -28,7 +58,7 @@ export const projects: Project[] = [
     demoLink: "https://devpost.com/software/protege-3r7zw5",
   },
   {
-    id: 2,
+    id: 4,
     image: "datathon_2024_picture.png",
     title: "ELO-Based MLB Game Predictor",
     description:
@@ -44,7 +74,7 @@ export const projects: Project[] = [
       "https://devpost.com/software/team-coin-flip-travel-fatigue-and-performance",
   },
   {
-    id: 3,
+    id: 5,
     image: "portfolio_website_picture.png",
     title: "Personal Portfolio Website",
     description:
@@ -56,6 +86,6 @@ export const projects: Project[] = [
       { name: "Framer Motion", category: "frontend" },
     ],
     githubLink: "https://github.com/AchrafAzzaoui/Portfolio-Website",
-    demoLink: "https://demo.com",
+    demoLink: "https://achrafazzaoui.vercel.app/",
   },
 ];
