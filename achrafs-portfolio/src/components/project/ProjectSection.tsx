@@ -41,10 +41,7 @@ export default function ProjectSection() {
       id="projects"
     >
       <div className="max-w-7xl mx-auto w-full">
-        <div
-          className="flex flex-col gap-4 md:gap-6 align-middle"
-          id="projects"
-        >
+        <div className="flex flex-col gap-4 md:gap-6 align-middle">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentPage}

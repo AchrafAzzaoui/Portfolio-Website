@@ -118,7 +118,7 @@ export default function ContactForm() {
                   value={formState.name}
                   onChange={handleChange}
                   className="form-input pl-11 pr-4 py-3"
-                  placeholder="Your Name"
+                  placeholder="Name"
                 />
                 {errors.name && (
                   <motion.p
@@ -142,7 +142,7 @@ export default function ContactForm() {
                   value={formState.email}
                   onChange={handleChange}
                   className="form-input pl-11 pr-4 py-3"
-                  placeholder="you@example.com"
+                  placeholder="Email"
                 />
                 {errors.email && (
                   <motion.p
@@ -168,7 +168,7 @@ export default function ContactForm() {
                 value={formState.subject}
                 onChange={handleChange}
                 className="form-input pl-11 pr-4 py-3"
-                placeholder="What's this about?"
+                placeholder="Subject Line"
               />
               {errors.subject && (
                 <motion.p
@@ -190,7 +190,7 @@ export default function ContactForm() {
                 value={formState.message}
                 onChange={handleChange}
                 className="form-input p-4 resize-none"
-                placeholder="Your message here..."
+                placeholder="Message body"
               />
               {errors.message && (
                 <motion.p

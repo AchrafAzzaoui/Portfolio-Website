@@ -32,7 +32,7 @@ export default function Header() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isScrolled]);
+  }, []);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -74,6 +74,12 @@ export default function Header() {
               Experience
             </a>
             <a
+              href="#skills"
+              className="font-sans font-medium text-fg text-lg transition-transform duration-300 hover:-translate-y-0.5"
+            >
+              Skills
+            </a>
+            <a
               href="#projects"
               className="font-sans font-medium text-fg text-lg transition-transform duration-300 hover:-translate-y-0.5"
             >
@@ -81,10 +87,13 @@ export default function Header() {
             </a>
           </div>
           <div className="hidden md:flex basis-6/16 flex-auto justify-evenly items-center">
-            <a href="https://www.linkedin.com/in/achraf-azzaoui-data-scientist">
+            <a
+              href="https://www.linkedin.com/in/achraf-azzaoui-data-scientist"
+              aria-label="LinkedIn"
+            >
               <RxLinkedinLogo className="text-3xl rounded-sm text-fg hover:text-accent hover:scale-110" />
             </a>
-            <a href="https://github.com/AchrafAzzaoui">
+            <a href="https://github.com/AchrafAzzaoui" aria-label="GitHub">
               <FaGithub className="text-3xl rounded-full text-fg hover:text-accent hover:scale-110" />
             </a>
             <a
@@ -96,6 +105,9 @@ export default function Header() {
           </div>
           <div className="md:hidden basis-3/16 flex-auto flex justify-end px-8 items-center">
             <button
+              type="button"
+              aria-expanded={isMenuOpen}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-4xl text-fg relative z-50"
             >
@@ -135,6 +147,13 @@ export default function Header() {
                       About
                     </a>
                     <a
+                      href="#experience"
+                      onClick={() => setIsMenuOpen(false)}
+                      className="text-xl font-medium text-fg hover:text-accent-soft transition-colors"
+                    >
+                      Experience
+                    </a>
+                    <a
                       href="#skills"
                       onClick={() => setIsMenuOpen(false)}
                       className="text-xl font-medium text-fg hover:text-accent-soft transition-colors"
@@ -154,12 +173,14 @@ export default function Header() {
                     <div className="flex justify-center gap-6 mb-8">
                       <a
                         href="https://github.com/AchrafAzzaoui"
+                        aria-label="GitHub"
                         className="text-fg hover:text-accent transition-colors hover:scale-110"
                       >
                         <FaGithub className="text-3xl" />
                       </a>
                       <a
                         href="https://www.linkedin.com/in/achraf-azzaoui-data-scientist"
+                        aria-label="LinkedIn"
                         className="text-fg hover:text-accent transition-colors hover:scale-110"
                       >
                         <RxLinkedinLogo className="text-3xl" />
@@ -167,20 +188,10 @@ export default function Header() {
                     </div>
                     <a
                       href="#contact"
-                      className="no-underline"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        document
-                          .getElementById("contact")
-                          ?.scrollIntoView({ behavior: "smooth" });
-                      }}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="block w-full py-3 bg-accent-strong hover:bg-accent-deep transition-colors rounded text-fg font-medium text-center"
                     >
-                      <button
-                        onClick={() => setIsMenuOpen(false)}
-                        className="w-full py-3 bg-accent-strong hover:bg-accent-deep transition-colors rounded text-fg font-medium"
-                      >
-                        Contact
-                      </button>
+                      Contact
                     </a>
                   </div>
                 </div>

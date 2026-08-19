@@ -8,7 +8,10 @@ export default function HeroSection() {
     "Machine Learning Engineer",
   ];
   return (
-    <section className="w-full flex flex-col items-center md:flex-row md:items-start md:justify-between mt-4 py-6 gap-8 md:py-12 md:gap-10">
+    <section
+      id="home"
+      className="w-full flex flex-col items-center md:flex-row md:items-start md:justify-between mt-4 py-6 gap-8 md:py-12 md:gap-10"
+    >
       <div className="w-full md:basis-[62.5%] flex flex-col items-center md:items-start">
         <h1 className="text-5xl md:text-7xl xl:text-8xl font-display font-extrabold text-center text-fg">
           I'm Achraf, a
