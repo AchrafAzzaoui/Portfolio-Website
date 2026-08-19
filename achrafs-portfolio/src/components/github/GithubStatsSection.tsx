@@ -14,7 +14,7 @@ export default function GithubStatsSection() {
   return (
     <section className="flex flex-col gap-12 mt-16 md:mt-36">
       <div className="max-w-7xl mx-auto w-full">
-        <h2 className="text-5xl font-semibold text-dark-text-primary mb-12 text-center">
+        <h2 className="text-5xl font-semibold text-fg mb-12 text-center">
           Github Activity
         </h2>
         <div

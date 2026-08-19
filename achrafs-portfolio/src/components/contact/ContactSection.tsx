@@ -87,13 +87,13 @@ export default function ContactForm() {
         className="w-full max-w-4xl mx-auto"
       >
         {/* Card Container matching project cards */}
-        <div className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-8 border border-slate-800/50 shadow-xl">
+        <div className="bg-surface/50 backdrop-blur-sm rounded-xl p-8 border border-surface-raised/50 shadow-xl">
           {/* Header Section */}
           <div className="flex items-center gap-4 mb-8">
-            <div className="p-3 bg-blue-500/10 rounded-lg">
-              <Mail className="w-6 h-6 text-blue-400" />
+            <div className="p-3 bg-accent/10 rounded-lg">
+              <Mail className="w-6 h-6 text-accent-soft" />
             </div>
-            <h2 className="text-3xl font-bold text-white">Contact Me</h2>
+            <h2 className="text-3xl font-bold text-fg">Contact Me</h2>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -101,7 +101,7 @@ export default function ContactForm() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="relative">
                 <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                  <User className="w-5 h-5 text-slate-400" />
+                  <User className="w-5 h-5 text-fg-muted" />
                 </div>
                 <input
                   type="text"
@@ -109,17 +109,14 @@ export default function ContactForm() {
                   name="name"
                   value={formState.name}
                   onChange={handleChange}
-                  className="w-full pl-11 pr-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg
-                           text-white placeholder-slate-400
-                           focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 
-                           transition-all duration-200"
+                  className="form-input pl-11 pr-4 py-3"
                   placeholder="Your Name"
                 />
                 {errors.name && (
                   <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="mt-1 text-sm text-red-400"
+                    className="mt-1 text-sm text-danger"
                   >
                     {errors.name}
                   </motion.p>
@@ -128,7 +125,7 @@ export default function ContactForm() {
 
               <div className="relative">
                 <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                  <Mail className="w-5 h-5 text-slate-400" />
+                  <Mail className="w-5 h-5 text-fg-muted" />
                 </div>
                 <input
                   type="email"
@@ -136,17 +133,14 @@ export default function ContactForm() {
                   name="email"
                   value={formState.email}
                   onChange={handleChange}
-                  className="w-full pl-11 pr-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg
-                           text-white placeholder-slate-400
-                           focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 
-                           transition-all duration-200"
+                  className="form-input pl-11 pr-4 py-3"
                   placeholder="you@example.com"
                 />
                 {errors.email && (
                   <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="mt-1 text-sm text-red-400"
+                    className="mt-1 text-sm text-danger"
                   >
                     {errors.email}
                   </motion.p>
@@ -157,7 +151,7 @@ export default function ContactForm() {
             {/* Subject Field */}
             <div className="relative">
               <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                <MessageSquare className="w-5 h-5 text-slate-400" />
+                <MessageSquare className="w-5 h-5 text-fg-muted" />
               </div>
               <input
                 type="text"
@@ -165,17 +159,14 @@ export default function ContactForm() {
                 name="subject"
                 value={formState.subject}
                 onChange={handleChange}
-                className="w-full pl-11 pr-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg
-                         text-white placeholder-slate-400
-                         focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 
-                         transition-all duration-200"
+                className="form-input pl-11 pr-4 py-3"
                 placeholder="What's this about?"
               />
               {errors.subject && (
                 <motion.p
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="mt-1 text-sm text-red-400"
+                    className="mt-1 text-sm text-danger"
                 >
                   {errors.subject}
                 </motion.p>
@@ -190,17 +181,14 @@ export default function ContactForm() {
                 rows={4}
                 value={formState.message}
                 onChange={handleChange}
-                className="w-full p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg
-                         text-white placeholder-slate-400
-                         focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 
-                         transition-all duration-200 resize-none"
+                className="form-input p-4 resize-none"
                 placeholder="Your message here..."
               />
               {errors.message && (
                 <motion.p
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="mt-1 text-sm text-red-400"
+                    className="mt-1 text-sm text-danger"
                 >
                   {errors.message}
                 </motion.p>
@@ -213,10 +201,10 @@ export default function ContactForm() {
               whileTap={{ scale: 0.98 }}
               type="submit"
               className="w-full flex items-center justify-center gap-2 py-3 px-6 
-                       bg-blue-600 hover:bg-blue-500 
-                       rounded-lg font-medium text-white
+                       bg-accent-strong hover:bg-accent 
+                       rounded-lg font-medium text-fg
                        transition-colors duration-200
-                       shadow-lg shadow-blue-500/25"
+                       shadow-lg shadow-accent/25"
             >
               <Send className="w-5 h-5" />
               Send Message

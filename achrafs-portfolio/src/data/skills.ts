@@ -20,34 +20,33 @@ export const tagColorSystem: Record<
   { background: string; text: string; icon?: ReactNode }
 > = {
   frontend: {
-    background: "bg-emerald-400/20",
-    text: "text-emerald-300",
+    background: "bg-skill-frontend/20",
+    text: "text-skill-frontend",
     icon: createElement(FaCss3Alt),
   },
   backend: {
-    background: "bg-sky-400/20",
-    text: "text-sky-300",
+    background: "bg-skill-backend/20",
+    text: "text-skill-backend",
     icon: createElement(CiServer),
   },
   database: {
-    background: "bg-fuchsia-400/20",
-    text: "text-fuchsia-300",
+    background: "bg-skill-database/20",
+    text: "text-skill-database",
     icon: createElement(FaDatabase),
   },
   devops: {
-    // lowercase to match data
-    background: "bg-amber-400/20",
-    text: "text-amber-300",
+    background: "bg-skill-devops/20",
+    text: "text-skill-devops",
     icon: createElement(FaDocker),
   },
   ml: {
-    background: "bg-rose-400/20",
-    text: "text-rose-300",
+    background: "bg-skill-ml/20",
+    text: "text-skill-ml",
     icon: createElement(FaPython),
   },
   other: {
-    background: "bg-violet-400/20",
-    text: "text-violet-300",
+    background: "bg-skill-other/20",
+    text: "text-skill-other",
     icon: createElement(MdMiscellaneousServices),
   },
 };

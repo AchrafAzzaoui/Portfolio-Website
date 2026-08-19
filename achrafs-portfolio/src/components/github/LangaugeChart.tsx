@@ -84,21 +84,21 @@ export default function LanguageChart({ repositories }: LanguageChartProps) {
 
   return (
     <div className="flex flex-col gap-4">
-      <h3 className="text-2xl md:text-4xl font-medium text-dark-text-primary mt-7 md:mt-0 md:mb-6">
+      <h3 className="text-2xl md:text-4xl font-medium text-fg mt-7 md:mt-0 md:mb-6">
         Language Breakdown (Top 5)
       </h3>
       <div className="flex flex-col gap-5">
         {sortedLanguages.map(([name, { color, percentage }]) => (
           <div key={name} className="flex flex-col gap-1 group">
             <div className="flex justify-between text-sm">
-              <span className="text-dark-text-secondary text-xl font-display">
+              <span className="text-fg-secondary text-xl font-display">
                 {name}
               </span>
-              <span className="text-dark-text-secondary text-lg">
+              <span className="text-fg-secondary text-lg">
                 {(percentage * 100).toFixed(1)}%
               </span>
             </div>
-            <div className="h-3 w-full bg-slate-700/50 rounded-md overflow-hidden mt-1">
+            <div className="h-3 w-full bg-surface-muted/50 rounded-md overflow-hidden mt-1">
               <div
                 className="h-full rounded-md transition-all duration-300 ease-in-out transform group-hover:scale-[1.02] group-hover:brightness-125"
                 style={{

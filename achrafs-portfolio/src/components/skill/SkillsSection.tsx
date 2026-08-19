@@ -8,7 +8,7 @@ export default function SkillsSection() {
       id="skills"
     >
       <div className="max-w-7xl mx-auto w-full">
-        <h2 className="text-5xl font-semibold text-dark-text-primary text-center">
+        <h2 className="text-5xl font-semibold text-fg text-center">
           Technical Skills
         </h2>
       </div>

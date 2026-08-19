@@ -11,8 +11,8 @@ interface SkillTagProps {
 
 export default function SkillTag({
   children,
-  bgColor = "bg-[#2DD4BF]",
-  textColor = "text-gray-800",
+  bgColor = "bg-skill-frontend",
+  textColor = "text-page",
   fontSize = "text-sm",
   fontWeight = "font-medium",
   padding = "px-2 py-1",
