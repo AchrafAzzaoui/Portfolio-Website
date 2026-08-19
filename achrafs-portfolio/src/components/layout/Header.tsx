@@ -89,28 +89,9 @@ export default function Header() {
             </a>
             <a
               href="#contact"
-              className="no-underline"
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
+              className="group relative z-10 inline-block overflow-hidden rounded-[0.275rem] border-2 [border-color:rgb(var(--color-accent))] bg-transparent px-7 py-2 font-display font-semibold text-fg before:absolute before:inset-0 before:z-0 before:content-[''] before:-translate-x-full before:bg-gradient-to-r before:from-accent-strong before:to-accent-deep before:transition-transform before:duration-300 before:ease-out hover:before:translate-x-0"
             >
-              <button
-                className="
-      relative z-10 overflow-hidden rounded-sm border-2 border-accent
-      inline-block px-7 py-2 font-semibold font-display bg-transparent text-fg group
-      hover:border-accent
-      before:absolute before:content-[''] before:inset-0
-      before:-translate-x-full before:bg-gradient-to-r before:from-accent-strong
-      before:to-accent-deep before:z-0
-      before:transition-transform before:duration-300 before:ease-out
-      hover:before:translate-x-0
-    "
-              >
-                <span className="relative z-10 text-lg">Contact</span>
-              </button>
+              <span className="relative z-10 text-lg">Contact</span>
             </a>
           </div>
           <div className="md:hidden basis-3/16 flex-auto flex justify-end px-8 items-center">

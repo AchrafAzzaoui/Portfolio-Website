@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { API_BASE } from "../config/api";
 
 export interface GithubData {
   viewer: {
@@ -46,9 +47,7 @@ const useGithubProfileStats = (apiUrl: string) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          `https://portfolio-website-iiqs.onrender.com/${apiUrl}`
-        );
+        const response = await fetch(`${API_BASE}/${apiUrl}`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

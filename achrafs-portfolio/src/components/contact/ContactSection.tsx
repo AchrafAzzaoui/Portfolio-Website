@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, Mail, User, MessageSquare } from "lucide-react";
+import { API_BASE } from "../../config/api";
 
 export default function ContactForm() {
   const [formState, setFormState] = useState({
@@ -16,6 +17,10 @@ export default function ContactForm() {
     subject: "",
     message: "",
   });
+
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
 
   const validateForm = () => {
     let isValid = true;
@@ -50,18 +55,20 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validateForm()) {
-      const response = await fetch(
-        "https://portfolio-website-iiqs.onrender.com/sendContactFormSubmission",
-        {
-          method: "POST",
-          body: JSON.stringify(formState),
-          headers: { "Content-Type": "application/json" },
-        }
-      );
-      const data = await response.json();
-      console.log(data);
+    if (!validateForm() || status === "submitting") return;
+
+    setStatus("submitting");
+    try {
+      const response = await fetch(`${API_BASE}/sendContactFormSubmission`, {
+        method: "POST",
+        body: JSON.stringify(formState),
+        headers: { "Content-Type": "application/json" },
+      });
+      if (!response.ok) throw new Error();
       setFormState({ name: "", email: "", subject: "", message: "" });
+      setStatus("success");
+    } catch {
+      setStatus("error");
     }
   };
 
@@ -70,6 +77,7 @@ export default function ContactForm() {
   ) => {
     const { name, value } = e.target;
     setFormState((prev) => ({ ...prev, [name]: value }));
+    if (status === "success" || status === "error") setStatus("idle");
     if (errors[name as keyof typeof errors]) {
       setErrors((prev) => ({ ...prev, [name]: "" }));
     }
@@ -200,15 +208,25 @@ export default function ContactForm() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               type="submit"
+              disabled={status === "submitting"}
               className="w-full flex items-center justify-center gap-2 py-3 px-6 
                        bg-accent-strong hover:bg-accent 
                        rounded-lg font-medium text-fg
                        transition-colors duration-200
-                       shadow-lg shadow-accent/25"
+                       shadow-lg shadow-accent/25
+                       disabled:opacity-60"
             >
               <Send className="w-5 h-5" />
-              Send Message
+              {status === "submitting" ? "Sending..." : "Send Message"}
             </motion.button>
+            {status === "success" && (
+              <p className="text-sm text-fg-secondary">Message sent.</p>
+            )}
+            {status === "error" && (
+              <p className="text-sm text-danger">
+                Couldn't send. Try again or email me.
+              </p>
+            )}
           </form>
         </div>
       </motion.div>
