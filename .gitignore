@@ -1,8 +1,5 @@
-
 /.history
-/node_modules
-/node_modules/react-dom
-node_modules/scheduler/cjs/scheduler.production.js
+node_modules/
 /server-backend
 
 .env
