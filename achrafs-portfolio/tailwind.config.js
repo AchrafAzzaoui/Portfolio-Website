@@ -44,8 +44,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
-        display: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
+        sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+        display: ["Figtree", ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
         brand: ["1.4rem", { lineHeight: "1.75rem" }],

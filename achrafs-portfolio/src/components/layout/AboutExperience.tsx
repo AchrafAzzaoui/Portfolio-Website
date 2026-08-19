@@ -15,7 +15,7 @@ export default function AboutExperience() {
           {/* Introduction */}
           <p>
             Hey! 👋 Thanks for checking out my portfolio. I'm a sophomore at
-            Rice University studying Computer Science and Statistics.
+            Rice University studying Computer Science.
           </p>
 
           {/* Interests & Passion */}
