@@ -67,13 +67,12 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post("/sendContactFormSubmission", contactLimiter, async (req, res) => {
-  const { name, email, subject, message } = req.body ?? {};
+  const { name, email, message } = req.body ?? {};
   const blank = (v) => typeof v !== "string" || !v.trim();
 
   if (
     blank(name) ||
     blank(email) ||
-    blank(subject) ||
     blank(message) ||
     !/\S+@\S+\.\S+/.test(email)
   ) {
@@ -89,7 +88,7 @@ app.post("/sendContactFormSubmission", contactLimiter, async (req, res) => {
     await transporter.sendMail({
       from: senderEmail,
       to: recipientEmail,
-      subject: subject.trim(),
+      subject: `Portfolio message from ${name.trim()}`,
       text: `Name: ${name.trim()}\nEmail: ${email.trim()}\nMessage: ${message.trim()}`,
     });
     res.json({ message: "Email sent successfully" });
