@@ -2,29 +2,41 @@ import { motion } from "framer-motion";
 
 interface ContributionVisualProps {
   contributionsThisMonth: {
+    totalContributions?: number;
     totalCommitContributions: number;
     totalPullRequestContributions: number;
     totalIssueContributions: number;
+    totalPullRequestReviewContributions?: number;
   };
   contributionsThisYear: {
+    totalContributions?: number;
     totalCommitContributions: number;
     totalPullRequestContributions: number;
     totalIssueContributions: number;
+    totalPullRequestReviewContributions?: number;
   };
+}
+
+function contributionCount(c: ContributionVisualProps["contributionsThisMonth"]) {
+  if (typeof c.totalContributions === "number") return c.totalContributions;
+  return (
+    c.totalCommitContributions +
+    c.totalPullRequestContributions +
+    c.totalIssueContributions +
+    (c.totalPullRequestReviewContributions ?? 0)
+  );
 }
 
 export default function ContributionVisual({
   contributionsThisMonth,
   contributionsThisYear,
 }: ContributionVisualProps) {
-  const totalContributionsThisMonth =
-    contributionsThisMonth.totalCommitContributions +
-    contributionsThisMonth.totalPullRequestContributions +
-    contributionsThisMonth.totalIssueContributions;
-  const totalContributionsThisYear =
-    contributionsThisYear.totalCommitContributions +
-    contributionsThisYear.totalPullRequestContributions +
-    contributionsThisYear.totalIssueContributions;
+  const totalContributionsThisMonth = contributionCount(
+    contributionsThisMonth
+  );
+  const totalContributionsThisYear = contributionCount(
+    contributionsThisYear
+  );
   return (
     <div className="flex flex-col md:flex-row gap-4 align-middle">
       <motion.div

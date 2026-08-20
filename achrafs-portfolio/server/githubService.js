@@ -18,51 +18,40 @@ const graphQLClient = new GraphQLClient("https://api.github.com/graphql", {
   headers: { authorization: `Bearer ${apiKey}` },
 });
 
-function getDynamicDateRanges() {
+function contributionWindow() {
   const now = new Date();
+  const to = now.toISOString();
   return {
-    firstDayOfMonth: new Date(now.getFullYear(), now.getMonth(), 1).toISOString(),
-    lastDayOfMonth: new Date(
-      now.getFullYear(),
-      now.getMonth() + 1,
-      0,
-      23,
-      59,
-      59
+    fromMonth: new Date(
+      Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1)
     ).toISOString(),
-    firstDayOfYear: new Date(now.getFullYear(), 0, 1).toISOString(),
-    lastDayOfYear: new Date(now.getFullYear(), 11, 31, 23, 59, 59).toISOString(),
+    fromYear: new Date(Date.UTC(now.getUTCFullYear(), 0, 1)).toISOString(),
+    to,
   };
 }
 
-const query = gql`
-  query GetGitHubData(
-    $fromMonth: DateTime!
-    $toMonth: DateTime!
-    $fromYear: DateTime!
-    $toYear: DateTime!
-  ) {
+const contributionsQuery = gql`
+  query GetContributions($from: DateTime!, $to: DateTime!) {
     viewer {
-      contributionsThisMonth: contributionsCollection(
-        from: $fromMonth
-        to: $toMonth
-      ) {
+      contributionsCollection(from: $from, to: $to) {
+        startedAt
+        endedAt
+        contributionCalendar {
+          totalContributions
+        }
         totalCommitContributions
         totalPullRequestContributions
         totalPullRequestReviewContributions
         totalIssueContributions
         restrictedContributionsCount
       }
-      contributionsThisYear: contributionsCollection(
-        from: $fromYear
-        to: $toYear
-      ) {
-        totalCommitContributions
-        totalPullRequestContributions
-        totalPullRequestReviewContributions
-        totalIssueContributions
-        restrictedContributionsCount
-      }
+    }
+  }
+`;
+
+const repositoriesQuery = gql`
+  query GetRepositories {
+    viewer {
       repositories(
         orderBy: { field: UPDATED_AT, direction: DESC }
         first: 100
@@ -89,19 +78,58 @@ const query = gql`
   }
 `;
 
-export async function fetchAndCacheGitHubData() {
-  const { firstDayOfMonth, lastDayOfMonth, firstDayOfYear, lastDayOfYear } =
-    getDynamicDateRanges();
+function shapeContributions(collection) {
+  return {
+    startedAt: collection.startedAt,
+    endedAt: collection.endedAt,
+    totalContributions: collection.contributionCalendar.totalContributions,
+    totalCommitContributions: collection.totalCommitContributions,
+    totalPullRequestContributions: collection.totalPullRequestContributions,
+    totalPullRequestReviewContributions:
+      collection.totalPullRequestReviewContributions,
+    totalIssueContributions: collection.totalIssueContributions,
+    restrictedContributionsCount: collection.restrictedContributionsCount,
+  };
+}
 
-  const data = await graphQLClient.request(query, {
-    fromMonth: firstDayOfMonth,
-    toMonth: lastDayOfMonth,
-    fromYear: firstDayOfYear,
-    toYear: lastDayOfYear,
-  });
+export async function fetchAndCacheGitHubData() {
+  const { fromMonth, fromYear, to } = contributionWindow();
+
+  // GitHub often ignores the second date range when two contributionsCollection
+  // aliases share one query, so month and year must be fetched separately.
+  const [monthData, yearData, repoData] = await Promise.all([
+    graphQLClient.request(contributionsQuery, { from: fromMonth, to }),
+    graphQLClient.request(contributionsQuery, { from: fromYear, to }),
+    graphQLClient.request(repositoriesQuery),
+  ]);
+
+  const data = {
+    viewer: {
+      contributionsThisMonth: shapeContributions(
+        monthData.viewer.contributionsCollection
+      ),
+      contributionsThisYear: shapeContributions(
+        yearData.viewer.contributionsCollection
+      ),
+      repositories: repoData.viewer.repositories,
+    },
+  };
 
   fs.writeFileSync(CACHE_PATH, JSON.stringify(data, null, 2), "utf8");
   return data;
+}
+
+function isCollapsedRangeCache(data) {
+  const month = data?.viewer?.contributionsThisMonth;
+  const year = data?.viewer?.contributionsThisYear;
+  if (!month || !year) return true;
+  if (month.startedAt && year.startedAt) {
+    return month.startedAt === year.startedAt;
+  }
+  return (
+    month.totalCommitContributions === year.totalCommitContributions &&
+    month.totalPullRequestContributions === year.totalPullRequestContributions
+  );
 }
 
 export function readCachedGitHubData() {
@@ -109,7 +137,9 @@ export function readCachedGitHubData() {
     if (!fs.existsSync(CACHE_PATH) || fs.statSync(CACHE_PATH).size === 0) {
       return null;
     }
-    return JSON.parse(fs.readFileSync(CACHE_PATH, "utf8"));
+    const data = JSON.parse(fs.readFileSync(CACHE_PATH, "utf8"));
+    if (isCollapsedRangeCache(data)) return null;
+    return data;
   } catch {
     return null;
   }
