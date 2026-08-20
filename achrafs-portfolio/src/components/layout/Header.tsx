@@ -55,7 +55,7 @@ export default function Header() {
         <nav className="flex">
           <div className="basis-3/16 flex-auto flex justify-start pl-4 md:pl-0 md:justify-center items-center font-display font-bold text-fg">
             <a href="#home">
-              <h2 className="text-brand md:text-2xl transition-transform duration-300 hover:-translate-y-0.5">
+              <h2 className="text-brand md:text-2xl transition-colors duration-300 hover:text-accent-soft">
                 Achraf Azzaoui
               </h2>
             </a>
@@ -63,38 +63,38 @@ export default function Header() {
           <div className="hidden md:flex basis-7/16 flex-auto flex justify-evenly items-center">
             <a
               href="#about"
-              className="font-sans font-medium text-fg text-lg transition-transform duration-300 hover:-translate-y-0.5"
+              className="font-sans font-medium text-fg text-lg transition-colors duration-300 hover:text-accent-soft"
             >
               About
             </a>
             <a
               href="#experience"
-              className="font-sans font-medium text-fg text-lg transition-transform duration-300 hover:-translate-y-0.5"
+              className="font-sans font-medium text-fg text-lg transition-colors duration-300 hover:text-accent-soft"
             >
               Experience
             </a>
             <a
               href="#skills"
-              className="font-sans font-medium text-fg text-lg transition-transform duration-300 hover:-translate-y-0.5"
+              className="font-sans font-medium text-fg text-lg transition-colors duration-300 hover:text-accent-soft"
             >
               Skills
             </a>
             <a
               href="#projects"
-              className="font-sans font-medium text-fg text-lg transition-transform duration-300 hover:-translate-y-0.5"
+              className="font-sans font-medium text-fg text-lg transition-colors duration-300 hover:text-accent-soft"
             >
               Projects
             </a>
           </div>
           <div className="hidden md:flex basis-6/16 flex-auto justify-evenly items-center">
             <a
-              href="https://www.linkedin.com/in/achraf-azzaoui-data-scientist"
+              href="https://www.linkedin.com/in/achraf-azzaoui/"
               aria-label="LinkedIn"
             >
-              <RxLinkedinLogo className="text-3xl rounded-sm text-fg hover:text-accent hover:scale-110" />
+              <RxLinkedinLogo className="text-3xl rounded-sm text-fg hover:text-accent-soft transition-colors" />
             </a>
             <a href="https://github.com/AchrafAzzaoui" aria-label="GitHub">
-              <FaGithub className="text-3xl rounded-full text-fg hover:text-accent hover:scale-110" />
+              <FaGithub className="text-3xl rounded-full text-fg hover:text-accent-soft transition-colors" />
             </a>
             <a
               href="#contact"
@@ -174,14 +174,14 @@ export default function Header() {
                       <a
                         href="https://github.com/AchrafAzzaoui"
                         aria-label="GitHub"
-                        className="text-fg hover:text-accent transition-colors hover:scale-110"
+                        className="text-fg hover:text-accent-soft transition-colors"
                       >
                         <FaGithub className="text-3xl" />
                       </a>
                       <a
-                        href="https://www.linkedin.com/in/achraf-azzaoui-data-scientist"
+                        href="https://www.linkedin.com/in/achraf-azzaoui/"
                         aria-label="LinkedIn"
-                        className="text-fg hover:text-accent transition-colors hover:scale-110"
+                        className="text-fg hover:text-accent-soft transition-colors"
                       >
                         <RxLinkedinLogo className="text-3xl" />
                       </a>

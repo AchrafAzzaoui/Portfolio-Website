@@ -1,32 +1,18 @@
-import Typewriter from "typewriter-effect";
 import profileImage from "../../assets/Profile_Picture.png";
 
 export default function HeroSection() {
-  const strings = [
-    "Full Stack Developer",
-    "Data Scientist",
-    "Machine Learning Engineer",
-  ];
   return (
     <section
       id="home"
       className="w-full flex flex-col items-center md:flex-row md:items-start md:justify-between mt-4 py-6 gap-8 md:py-12 md:gap-10"
     >
       <div className="w-full md:basis-[62.5%] flex flex-col items-center md:items-start">
-        <h1 className="text-5xl md:text-7xl xl:text-8xl font-display font-extrabold text-center text-fg">
-          I'm Achraf, a
+        <h1 className="text-4xl md:text-6xl xl:text-7xl font-display font-extrabold text-center md:text-left text-fg leading-tight">
+          I'm Achraf, a software engineer.
         </h1>
-        <h2 className="text-3xl md:text-4xl xl:text-5xl font-sans font-medium text-center text-fg mt-6">
-          <Typewriter
-            onInit={(typewriter) => {
-              strings.forEach((string) => {
-                typewriter.typeString(string).pauseFor(800).deleteAll();
-              });
-              typewriter.start();
-            }}
-            options={{ loop: true }}
-          />
-        </h2>
+        <p className="text-xl md:text-2xl xl:text-3xl font-sans font-medium text-center md:text-left text-fg-secondary mt-6">
+          CS senior at Rice. SWE intern at Amazon, previously @ LinkedIn.
+        </p>
       </div>
       <div className="w-full md:basis-[37.5%] flex flex-col items-center md:items-start">
         <div className="relative w-full h-96 md:h-80 group flex justify-center items-center">
@@ -45,7 +31,7 @@ export default function HeroSection() {
             >
               <img
                 src={profileImage}
-                alt=""
+                alt="Achraf Azzaoui"
                 className="w-full h-full object-cover rounded-xl scale-150"
               />
               <div

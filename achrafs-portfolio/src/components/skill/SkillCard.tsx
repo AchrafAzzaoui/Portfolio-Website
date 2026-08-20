@@ -25,7 +25,7 @@ export default function SkillCard({ category, skills }: SkillCardProps) {
   const icon = tagColorSystem[category].icon;
 
   return (
-    <div className="card-surface px-8 py-6 pb-16 h-full flex flex-col">
+    <div className="card-surface card-grow px-8 py-6 pb-16 h-full flex flex-col">
       {icon &&
         cloneElement(icon as React.ReactElement, {
           className: `text-6xl ${tagColorSystem[category].text}`,
