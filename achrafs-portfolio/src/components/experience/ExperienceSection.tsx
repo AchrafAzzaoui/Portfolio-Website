@@ -33,7 +33,7 @@ export default function ExperienceSection() {
           transition={{ duration: 0.3 }}
           className="space-y-8"
         >
-          <h2 className="text-5xl font-semibold text-dark-text-primary font-sans text-center mb-12">
+          <h2 className="text-5xl font-semibold text-fg font-sans text-center mb-12">
             Experience
           </h2>
           <div className="w-full flex flex-col md:flex-row gap-4 md:gap-6">
@@ -46,10 +46,10 @@ export default function ExperienceSection() {
       <div className="flex justify-center items-center space-x-8">
         <button
           onClick={prevPage}
-          className="p-2 rounded-full bg-slate-800/50 hover:bg-slate-700/50 transition-colors"
+          className="pager-btn"
           aria-label="Previous page"
         >
-          <ChevronLeft className="w-6 h-6 text-gray-400" />
+          <ChevronLeft className="w-6 h-6 text-fg-muted" />
         </button>
 
         <div className="flex space-x-2">
@@ -58,7 +58,7 @@ export default function ExperienceSection() {
               key={idx}
               onClick={() => setCurrentPage(idx)}
               className={`w-3 h-3 rounded-full transition-colors ${
-                currentPage === idx ? "bg-blue-500" : "bg-gray-600"
+                currentPage === idx ? "bg-accent" : "bg-fg-muted"
               }`}
               aria-label={`Go to page ${idx + 1}`}
             />
@@ -67,10 +67,10 @@ export default function ExperienceSection() {
 
         <button
           onClick={nextPage}
-          className="p-2 rounded-full bg-slate-800/50 hover:bg-slate-700/50 transition-colors"
+          className="pager-btn"
           aria-label="Next page"
         >
-          <ChevronRight className="w-6 h-6 text-gray-400" />
+          <ChevronRight className="w-6 h-6 text-fg-muted" />
         </button>
       </div>
     </div>

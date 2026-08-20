@@ -1,9 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+:root {
+  --color-page: 10 14 28;
+  --color-page-start: 10 15 26;
+  --color-page-mid: 12 19 34;
+  --color-page-end: 14 22 40;
+
+  --color-surface: 15 23 42;
+  --color-surface-raised: 30 41 59;
+  --color-surface-muted: 51 65 85;
+
+  --color-fg: 248 250 252;
+  --color-fg-secondary: 148 163 184;
+  --color-fg-muted: 100 116 139;
+
+  --color-line: 255 255 255;
+  --color-overlay: 0 0 0;
+
+  --color-accent: 139 92 246;
+  --color-accent-strong: 147 51 234;
+  --color-accent-deep: 107 33 168;
+  --color-accent-soft: 192 132 252;
+  --color-accent-faint: 216 180 254;
+  --color-accent-tint: 233 213 255;
+
+  --color-danger: 248 113 113;
+
+  --color-skill-frontend: 52 211 153;
+  --color-skill-backend: 56 189 248;
+  --color-skill-database: 232 121 249;
+  --color-skill-devops: 251 191 36;
+  --color-skill-ml: 251 113 133;
+  --color-skill-other: 167 139 250;
+}
 
 @layer base {
   * {
@@ -14,10 +45,11 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
   }
 
   body {
-    @apply font-sans antialiased;
+    @apply font-sans antialiased text-fg;
   }
 
   ul,
@@ -41,19 +73,29 @@
     cursor: pointer;
   }
 }
+
 @layer components {
-  .before\:absolute::before {
-    content: "";
-    position: absolute;
+  .card-surface {
+    @apply bg-gradient-to-br from-surface to-surface-raised
+           border-2 border-line/5
+           hover:border-accent/40
+           transition-all duration-300 ease-in-out
+           hover:shadow-lg hover:shadow-accent/10
+           rounded-lg;
   }
 
-  .card-gradient-hover {
-    @apply bg-gradient-to-br from-slate-900 to-slate-800 
-           border-2 border-white/5 
-           hover:border-purple-500/40 
-           transition-all duration-300 ease-in-out 
-           hover:scale-[1.02] 
-           hover:shadow-lg hover:shadow-purple-500/10
-           rounded-lg;
+  .card-grow {
+    @apply hover:scale-[1.02];
+  }
+
+  .form-input {
+    @apply w-full bg-surface-raised/50 border border-surface-muted/50 rounded-lg
+           text-fg placeholder-fg-muted
+           focus:ring-2 focus:ring-accent/50 focus:border-accent/50
+           transition-all duration-200;
+  }
+
+  .pager-btn {
+    @apply p-2 rounded-full bg-surface-raised/50 hover:bg-surface-muted/50 transition-colors;
   }
 }

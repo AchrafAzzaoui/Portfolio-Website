@@ -25,12 +25,12 @@ export default function SkillCard({ category, skills }: SkillCardProps) {
   const icon = tagColorSystem[category].icon;
 
   return (
-    <div className="card-gradient-hover px-8 py-6 pb-16 h-full flex flex-col">
+    <div className="card-surface card-grow px-8 py-6 pb-16 h-full flex flex-col">
       {icon &&
         cloneElement(icon as React.ReactElement, {
           className: `text-6xl ${tagColorSystem[category].text}`,
         })}
-      <h3 className="text-2xl text-sans text-dark-text-secondary font-semibold mt-4 mb-6">
+      <h3 className="text-2xl text-sans text-fg-secondary font-semibold mt-4 mb-6">
         {rename(category)}
       </h3>
       <div className="flex flex-wrap gap-2">

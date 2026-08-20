@@ -30,50 +30,60 @@ export default function ProjectModal({
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
+    if (!isOpen) return;
+    const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
-    document.addEventListener("keydown", handleEscape);
-    return () => document.removeEventListener("keydown", handleEscape);
-  }, [onClose]);
-
-  if (!isOpen) return null;
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen, onClose]);
 
   return createPortal(
-    <FocusTrap>
-      <AnimatePresence>
-        {isOpen && (
-          <div className="fixed inset-0 z-50 overflow-y-auto">
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          className="fixed inset-0 z-50 overflow-y-auto"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <FocusTrap>
             <div className="flex items-center justify-center min-h-screen px-4 text-center">
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="fixed inset-0 bg-black/60 backdrop-blur-sm"
+              <div
+                className="fixed inset-0 bg-overlay/60 backdrop-blur-sm"
                 onClick={onClose}
               />
 
-              <motion.div
+              <div
                 ref={modalRef}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                className="card-gradient-hover w-[90%] max-w-2xl rounded-[1.6rem] shadow-lg relative"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="project-modal-title"
+                className="card-surface w-[90%] max-w-2xl rounded-card shadow-lg relative"
               >
                 <div className="p-8 flex flex-col gap-6">
                   <div className="flex justify-between items-start">
-                    <h3 className="text-3xl font-display text-dark-text-primary font-semibold">
+                    <h3
+                      id="project-modal-title"
+                      className="text-3xl font-display text-fg font-semibold"
+                    >
                       {title}
                     </h3>
                     <button
+                      type="button"
+                      aria-label="Close"
                       onClick={onClose}
-                      className="text-dark-text-secondary hover:text-dark-text-primary transition-colors"
+                      className="text-fg-secondary hover:text-fg transition-colors"
                     >
                       <IoClose className="text-2xl" />
                     </button>
                   </div>
 
-                  <p className="text-dark-text-secondary">{description}</p>
+                  <p className="text-fg-secondary">{description}</p>
 
                   <div className="flex flex-wrap gap-2">
                     {projectSkills.map((skill) => (
@@ -93,7 +103,7 @@ export default function ProjectModal({
                         href={githubLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex basis-1/2 items-center gap-4 text-purple-400 hover:text-purple-300 transition-colors text-lg font-display font-extralight"
+                        className="flex basis-1/2 items-center gap-4 text-accent-soft hover:text-accent-faint transition-colors text-lg font-display font-extralight"
                       >
                         <FaGithub className="text-xl" />
                         <span>View Code</span>
@@ -104,7 +114,7 @@ export default function ProjectModal({
                         href={demoLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex basis-1/2 justify-center items-center gap-4 text-purple-400 hover:text-purple-300 transition-colors text-lg font-display font-extralight"
+                        className="flex basis-1/2 justify-center items-center gap-4 text-accent-soft hover:text-accent-faint transition-colors text-lg font-display font-extralight"
                       >
                         <CiGlobe className="text-xl" />
                         <span>Live Demo</span>
@@ -112,12 +122,12 @@ export default function ProjectModal({
                     )}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
-          </div>
-        )}
-      </AnimatePresence>
-    </FocusTrap>,
+          </FocusTrap>
+        </motion.div>
+      )}
+    </AnimatePresence>,
     document.body
   );
 }

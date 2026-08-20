@@ -42,23 +42,23 @@ export default function ProjectCard({
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
-      <div className="w-full card-gradient-hover aspect-[5/6] flex flex-col space-between rounded-[1.6rem] shadow-lg pb-4">
-        <div className="aspect-video  relative overflow-hidden rounded-t-[1.6rem]">
+      <div className="w-full card-surface aspect-[5/6] flex flex-col space-between rounded-card shadow-lg pb-4">
+        <div className="aspect-video  relative overflow-hidden rounded-t-card">
           <img
             src={getImageUrl(image)}
             alt={title}
             className="object-cover w-full h-full"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-overlay to-transparent" />
         </div>
         <div className="px-6 py-3 flex-1 flex flex-col justify-between gap-4">
-          <h3 className="text-3xl font-display text-dark-text-primary font-semibold mt-4 mb-6">
+          <h3 className="text-3xl font-display text-fg font-semibold mt-4 mb-6">
             {title}
           </h3>
 
           <button
             onClick={() => setIsModalOpen(true)}
-            className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
+            className="flex items-center gap-2 text-accent-soft hover:text-accent-faint transition-colors"
           >
             See more <FiArrowRight className="text-lg" />
           </button>
@@ -79,7 +79,7 @@ export default function ProjectCard({
                 href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex basis-1/2 ml-2 items-center gap-4 text-purple-400 hover:text-purple-300 transition-colors text-lg font-display font-extralight"
+                className="flex basis-1/2 ml-2 items-center gap-4 text-accent-soft hover:text-accent-faint transition-colors text-lg font-display font-extralight"
               >
                 <FaGithub className="text-xl" />
                 <span>View Code</span>
@@ -90,7 +90,7 @@ export default function ProjectCard({
                 href={demoLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex basis-1/2 justify-center items-center gap-4 text-purple-400 hover:text-purple-300 transition-colors text-lg font-display font-extralight"
+                className="flex basis-1/2 justify-center items-center gap-4 text-accent-soft hover:text-accent-faint transition-colors text-lg font-display font-extralight"
               >
                 <CiGlobe className="text-xl" />
                 <span>Live Demo</span>

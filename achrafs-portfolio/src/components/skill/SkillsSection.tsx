@@ -1,14 +1,16 @@
 import { skills } from "../../data/skills";
 import SkillCard from "./SkillCard";
 export default function SkillsSection() {
-  const sortedSkills = skills.sort((a, b) => b.skills.length - a.skills.length);
+  const sortedSkills = [...skills].sort(
+    (a, b) => b.skills.length - a.skills.length
+  );
   return (
     <section
       className="flex flex-col items-center gap-12 mt-16 md:mt-36"
       id="skills"
     >
       <div className="max-w-7xl mx-auto w-full">
-        <h2 className="text-5xl font-semibold text-dark-text-primary text-center">
+        <h2 className="text-5xl font-semibold text-fg text-center">
           Technical Skills
         </h2>
       </div>
